@@ -1,0 +1,26 @@
+.section-features {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  position: relative;
+
+  &::before {
+    background-image: url('../i/general/features-back.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+    height: 0;
+    left: 0;
+    padding-top: percentage(1020/1366);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.features-pills {
+  .nav-link {
+
+  }
+}

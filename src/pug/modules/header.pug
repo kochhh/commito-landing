@@ -1,0 +1,19 @@
+header.header
+  .container
+    .navbar
+      a.navbar-brand(href="#")
+        img(src="./static/i/general/logo.svg" alt="Commito")
+      .navbar-side
+        button.btn.btn-auth.btn-signup(type="button") Регистрация
+        button.btn.btn-auth.btn-login(type="button") Вход
+        .navbar-lang.dropdown
+          button.btn.btn-lang-toggle.dropdown-toggle#langDropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            img.lang-flag(src="./static/i/general/flags/ru.svg" alt="Русский")
+            +icon("caret")
+          .dropdown-menu(aria-labelledby="langDropdown")
+            a.dropdown-item(href="#" title="English")
+              img.lang-flag(src="./static/i/general/flags/gb.svg" alt="English")
+            a.dropdown-item(href="#" title="Русский")
+              img.lang-flag(src="./static/i/general/flags/ru.svg" alt="Русский")
+            a.dropdown-item(href="#" title="Deutsch")
+              img.lang-flag(src="./static/i/general/flags/de.svg" alt="Deutsch")

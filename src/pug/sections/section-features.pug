@@ -1,0 +1,23 @@
+section.section.section-features
+  .container
+    .row
+      .col-3
+        .nav.features-pills#featuresPills(role="tablist" aria-orientation="vertical")
+          a.nav-link.active#pill-forecast(data-toggle="pill" href="#forecast" role="tab" aria-controls="forecast" aria-selected="false") Прогноз даже в начале и середине месяца
+          a.nav-link#pill-history(data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="false") История эффективности сотрудников
+          a.nav-link#pill-purposes(data-toggle="pill" href="#purposes" role="tab" aria-controls="purposes" aria-selected="false") Цели на месяц, квартал, и год
+          a.nav-link#pill-settings(data-toggle="pill" href="#settings" role="tab" aria-controls="settings" aria-selected="false") Гибкие настройки доступа
+      .col-9
+        .features-content.tab-content#featuresContent
+          .tab-pane.fade.show.active#forecast(role="tabpanel" aria-labelledby="pill-forecast")
+            .features-screenshot
+              img(src="./static/i/content/features-screenshot-forecast.png" alt="")
+          .tab-pane.fade#history(role="tabpanel" aria-labelledby="pill-history")
+            .features-screenshot
+              img(src="./static/i/content/features-screenshot-history.png" alt="")
+          .tab-pane.fade#purposes(role="tabpanel" aria-labelledby="pill-purposes")
+            .features-screenshot
+              img(src="./static/i/content/features-screenshot-purposes.png" alt="")
+          .tab-pane.fade#settings(role="tabpanel" aria-labelledby="pill-settings")
+            .features-screenshot
+              img(src="./static/i/content/features-screenshot-settings.png" alt="")

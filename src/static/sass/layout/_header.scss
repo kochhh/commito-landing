@@ -1,0 +1,42 @@
+.header {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-fixed;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.navbar-side {
+  display: flex;
+  margin-left: auto;
+
+  &__item {
+    margin-left: 30px;
+  }
+}
+
+.navbar-brand {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.navbar-lang {
+  margin-left: 12px;
+
+  .lang-flag {
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    display: block;
+    width: 19px;
+  }
+}

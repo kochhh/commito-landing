@@ -1,0 +1,36 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  overflow: hidden;
+  padding: 4px 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: $zindex-dropdown;
+  @include dropdown;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 18px;
+  transition: $transition-base;
+
+  &:hover {
+    background-color: darken($white, 2%);
+  }
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

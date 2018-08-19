@@ -1,0 +1,123 @@
+.section-system {
+  margin-bottom: 115px;
+}
+
+.system {
+  height: 928px;
+  margin-top: 70px;
+  position: relative;
+
+  &::before {
+    @include size(1144px, 982px);
+    @include absolute-center;
+    background-image: url('../i/general/system-spot.svg');
+    background-repeat: no-repeat;
+    content: '';
+    margin: 20px 0 0 -477px;
+  }
+
+  > .container {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.system-decor {
+  @include size(1232px, 1249px);
+  @include absolute-center;
+  background-image: url('../i/general/system-waves.svg');
+  background-repeat: no-repeat;
+}
+
+.system-core {
+  @include size(590px, 408px);
+  @include absolute-center;
+  margin: -4px 0 0 -38px;
+}
+
+.system-items {
+}
+
+.system-item {
+  align-items: center;
+  display: flex;
+  position: absolute;
+
+  &__icon {
+    @include size(100px);
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__name {
+    color: $purple;
+    font-size: 1.1875rem;
+    font-weight: 500;
+    line-height: 1.58;
+    margin-left: 24px;
+  }
+
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    flex-direction: row-reverse;
+
+    .system-item__icon {
+      @include size(120px);
+      box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .system-item__name {
+      color: $light;
+      margin: 0 28px 0 0;
+      text-align: right;
+    }
+  }
+
+  &--assessment {
+    left: 57px;
+    top: 148px;
+
+    .system-item__icon img {
+      transform: translate(0, 3px);
+    }
+  }
+
+  &--crm {
+    left: 121px;
+    top: 364px;
+  }
+
+  &--telephony {
+    left: 12px;
+    top: 556px;
+  }
+
+  &--trackers {
+    left: 215px;
+    top: 707px;
+
+    .system-item__icon img {
+      transform: translate(4px, 1px);
+    }
+  }
+
+  &--account {
+    right: 144px;
+    top: 97px;
+  }
+
+  &--reports {
+    right: 19px;
+    top: 388px;
+  }
+
+  &--informer {
+    right: 107px;
+    top: 694px;
+  }
+}

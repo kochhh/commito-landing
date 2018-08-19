@@ -1,0 +1,127 @@
+.section-roles {
+  margin-bottom: 100px;
+}
+
+.roles-tabs {
+}
+
+.roles-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+
+  .nav-link {
+    border-radius: 100px;
+    color: #B2B7C0;
+    display: block;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 2.1rem;
+    padding: 0.813rem 1.63rem;
+
+    &.active {
+      background-color: #F0F6FB;
+      color: $dark;
+    }
+
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+
+.roles-content {
+  overflow: hidden;
+}
+
+.roles-side {
+  display: flex;
+  flex-direction: column;
+  height: 410px;
+  justify-content: flex-end;
+}
+
+.roles-side-speech {
+  margin-bottom: 1rem;
+
+  &__head {
+    color: $light;
+    margin-bottom: 0.35rem;
+    padding-left: 1.8125rem;
+  }
+
+  &__body {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+
+  &__item {
+    background-color: #F0F6FB;
+    border-radius: 0.5rem 1.8125rem 1.8125rem 0.5rem;
+    color: $headings-color;
+    font-size: 19px;
+    line-height: 1.58;
+    padding: 0.875rem 1.8125rem;
+
+    + .roles-side-speech__item {
+      margin-top: 4px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 1.8125rem;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 1.8125rem;
+    }
+
+    &:first-child:last-child {
+      border-radius: 1.8125rem
+    }
+  }
+
+  &__load {
+    display: flex;
+    padding-left: 1.8125rem;
+
+    .loading-dot {
+      @include size(12px);
+      background-color: #E7F1F8;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+  }
+}
+
+.roles-side-person {
+  text-align: center;
+  width: 264px;
+
+  &__pic {
+    @include size(129px);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    color: $headings-color;
+    font-size: 1.4375rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  &__post {
+    color: #AAB2BC;
+  }
+}
+
+.roles-screenshot {
+  margin-left: -52px;
+}

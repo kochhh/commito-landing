@@ -1,0 +1,78 @@
+section.section.section-roles
+  .roles-tabs
+    .container
+      .nav.roles-nav#rolesNav(role="tablist")
+        a.nav-item.nav-link.active#tab-head(href="#head" data-toggle="tab" role="tab" aria-controls="head" aria-selected="true") Руководитель
+        a.nav-item.nav-link#tab-associate(href="#associate" data-toggle="tab" role="tab" aria-controls="associate" aria-selected="false") Сотрудник
+        a.nav-item.nav-link#tab-accountant(href="#accountant" data-toggle="tab" role="tab" aria-controls="accountant" aria-selected="false") Бухгалтер
+  .roles-content.tab-content#rolesContent
+    .tab-pane.fade.show.active#head(role="tabpanel" aria-labelledby="tab-head")
+      .container
+        .row
+          .col-4
+            .roles-side
+              .roles-side-speech
+                .roles-side-speech__head Андрей, 17:34
+                .roles-side-speech__body
+                  .roles-side-speech__item
+                    | Мы справляемся?
+                    br
+                    | Кому и в чём помочь?
+                .roles-side-speech__load
+                  span.loading-dot
+                  span.loading-dot
+                  span.loading-dot
+              .roles-side-person
+                .roles-side-person__pic
+                  img(src="http://picsum.photos/258/258?photo=1" alt="")
+                .roles-side-person__name Андрей
+                .roles-side-person__post Управляющий партнёр
+          .col-8
+            .roles-screenshot
+              img(src="./static/i/content/roles-head-screenshot.jpg" alt="")
+    .tab-pane.fade#associate(role="tabpanel" aria-labelledby="tab-associate")
+      .container
+        .row
+          .col-4
+            .roles-side
+              .roles-side-speech
+                .roles-side-speech__head Андрей, 17:34
+                .roles-side-speech__body
+                  .roles-side-speech__item
+                    | Хорошо ли я работаю?
+                  .roles-side-speech__item
+                    | 🤔
+                .roles-side-speech__load
+                  span.loading-dot
+                  span.loading-dot
+                  span.loading-dot
+              .roles-side-person
+                .roles-side-person__pic
+                  img(src="http://picsum.photos/258/258?photo=2" alt="")
+                .roles-side-person__name Павел
+                .roles-side-person__post Менеджер по продажам
+          .col-8
+            .roles-screenshot
+              img(src="./static/i/content/roles-associate-screenshot.jpg" alt="")
+    .tab-pane.fade#accountant(role="tabpanel" aria-labelledby="tab-accountant")
+      .container
+        .row
+          .col-4
+            .roles-side
+              .roles-side-speech
+                .roles-side-speech__head Андрей, 17:34
+                .roles-side-speech__body
+                  .roles-side-speech__item
+                    | Кому сколько заплатить? 🤷
+                .roles-side-speech__load
+                  span.loading-dot
+                  span.loading-dot
+                  span.loading-dot
+              .roles-side-person
+                .roles-side-person__pic
+                  img(src="http://picsum.photos/258/258?photo=3" alt="")
+                .roles-side-person__name Екатерина
+                .roles-side-person__post Бухгалтер
+          .col-8
+            .roles-screenshot
+              img(src="./static/i/content/roles-accountant-screenshot.jpg" alt="")

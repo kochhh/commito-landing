@@ -1,0 +1,17 @@
+$font-root-path: "../fonts/";
+
+@mixin fontFace($font-name, $font-file-name, $font-weight, $font-style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src:
+      url($font-root-path + $font-file-name + ".woff2") format("woff2"),
+      url($font-root-path + $font-file-name + ".woff") format("woff");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include fontFace(Geometria, "geometria-webfont", 400);
+@include fontFace(Geometria, "geometria-light-webfont", 300);
+@include fontFace(Geometria, "geometria-medium-webfont", 500);
+@include fontFace(Geometria, "geometria-bold-webfont", 700);

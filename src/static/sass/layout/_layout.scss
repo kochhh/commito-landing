@@ -1,0 +1,9 @@
+body {
+  min-width: get-container-max-width(xl);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  min-width: get-container-max-width(xl);
+}
