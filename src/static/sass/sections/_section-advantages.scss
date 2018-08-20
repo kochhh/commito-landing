@@ -1,0 +1,66 @@
+.section-advantages {
+  padding-top: 70px;
+  position: relative;
+
+  &::before {
+    background-image: url('../i/general/advantages-decor.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    height: 1020px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.section-advantages-inner {
+  overflow: hidden;
+  padding-top: 115px;
+  padding-bottom: 80px;
+}
+
+.advantages-pills {
+  margin-left: 45px;
+}
+
+.advantages-pill {
+  border-radius: rem(16);
+  color: $light;
+  display: block;
+  margin-bottom: rem(18);
+  padding: rem(32) rem(34) rem(24);
+  width: 255px;
+
+  &__icon {
+    margin-bottom: rem(16);
+  }
+
+  &__name {
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  &:hover {
+    color: $dark;
+  }
+
+  &.active {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    color: $dark;
+  }
+}
+
+.advantages-screenshot {
+  margin-left: 60px;
+
+  img {
+    border-radius: rem(16);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+  }
+}

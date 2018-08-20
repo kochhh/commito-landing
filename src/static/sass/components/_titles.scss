@@ -1,6 +1,10 @@
-.section-title {
+.title {
   color: $headings-color;
-  font-size: 36px;
+  font-size: rem(36);
   font-weight: 700;
+  line-height: $headings-line-height;
+}
+
+.section-title {
   text-align: center;
 }

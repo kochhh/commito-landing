@@ -41,10 +41,6 @@
   @include position(relative, $top, $right, $bottom, $left);
 }
 
-@mixin rem($size) {
-  return: ($size/16)rem;
-}
-
 @mixin dropdown {
   opacity: 0;
   transition: $transition-base;

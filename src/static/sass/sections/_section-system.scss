@@ -1,5 +1,5 @@
 .section-system {
-  margin-bottom: 115px;
+  padding-bottom: 50px;
 }
 
 .system {
@@ -41,7 +41,9 @@
 .system-item {
   align-items: center;
   display: flex;
+  left: 50%;
   position: absolute;
+  white-space: nowrap;
 
   &__icon {
     @include size(100px);
@@ -55,7 +57,7 @@
 
   &__name {
     color: $purple;
-    font-size: 1.1875rem;
+    font-size: rem(19);
     font-weight: 500;
     line-height: 1.58;
     margin-left: 24px;
@@ -79,7 +81,7 @@
   }
 
   &--assessment {
-    left: 57px;
+    margin-left: -530px;
     top: 148px;
 
     .system-item__icon img {
@@ -88,17 +90,17 @@
   }
 
   &--crm {
-    left: 121px;
+    margin-left: -466px;
     top: 364px;
   }
 
   &--telephony {
-    left: 12px;
+    margin-left: -576px;
     top: 556px;
   }
 
   &--trackers {
-    left: 215px;
+    margin-left: -372px;
     top: 707px;
 
     .system-item__icon img {
@@ -107,17 +109,17 @@
   }
 
   &--account {
-    right: 144px;
+    margin-left: 180px;
     top: 97px;
   }
 
   &--reports {
-    right: 19px;
+    margin-left: 332px;
     top: 388px;
   }
 
   &--informer {
-    right: 107px;
+    margin-left: 234px;
     top: 694px;
   }
 }

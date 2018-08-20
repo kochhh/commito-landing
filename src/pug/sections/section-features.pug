@@ -1,23 +1,29 @@
 section.section.section-features
-  .container
-    .row
-      .col-3
-        .nav.features-pills#featuresPills(role="tablist" aria-orientation="vertical")
-          a.nav-link.active#pill-forecast(data-toggle="pill" href="#forecast" role="tab" aria-controls="forecast" aria-selected="false") Прогноз даже в начале и середине месяца
-          a.nav-link#pill-history(data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="false") История эффективности сотрудников
-          a.nav-link#pill-purposes(data-toggle="pill" href="#purposes" role="tab" aria-controls="purposes" aria-selected="false") Цели на месяц, квартал, и год
-          a.nav-link#pill-settings(data-toggle="pill" href="#settings" role="tab" aria-controls="settings" aria-selected="false") Гибкие настройки доступа
-      .col-9
-        .features-content.tab-content#featuresContent
-          .tab-pane.fade.show.active#forecast(role="tabpanel" aria-labelledby="pill-forecast")
-            .features-screenshot
-              img(src="./static/i/content/features-screenshot-forecast.png" alt="")
-          .tab-pane.fade#history(role="tabpanel" aria-labelledby="pill-history")
-            .features-screenshot
-              img(src="./static/i/content/features-screenshot-history.png" alt="")
-          .tab-pane.fade#purposes(role="tabpanel" aria-labelledby="pill-purposes")
-            .features-screenshot
-              img(src="./static/i/content/features-screenshot-purposes.png" alt="")
-          .tab-pane.fade#settings(role="tabpanel" aria-labelledby="pill-settings")
-            .features-screenshot
-              img(src="./static/i/content/features-screenshot-settings.png" alt="")
+  .features-block.features-block--knowledge
+    .container
+      .features-block-decor
+        img(src="./static/i/general/features-knowledge-pic.png" width="828" height="804" alt="")
+      .row
+        .col-12
+          .features-block-content
+            .features-block__pretitle Шаблоны KPI и база знаний
+            .features-block__title.title Вы&nbsp;справитесь, даже если не&nbsp;сталкивались с&nbsp;KPI
+            .features-block__text
+              p Показатели эффективности, используемые в&nbsp;системе, разработаны на&nbsp;основе реального опыта внедрений KPI в&nbsp;различных компаниях. Даже если для вас это первый опыт внедрения, для вас оно пройдёт легко и&nbsp;прозрачно. Для этого в&nbsp;системе есть шаблоны схем мотивации для различных отраслей и&nbsp;отделов, а&nbsp;также база знаний с&nbsp;описанием лучших практик по&nbsp;использованию KPI.
+            a.btn.btn-primary(href="#") Попробовать бесплатно
+  .features-block.features-block--customization
+    .container
+      .row.no-gutters
+        .col-10
+          .features-block-pic
+            img(src="./static/i/general/features-customization-pic.png" width="417" height="256" alt="")
+        .col-14
+          .features-block-content
+            .features-block__pretitle Индивидуальная доработка Commito для вас
+            .features-block__title.title
+              | Учтем все тонкости ваших
+              br
+              | бизнес-процессов
+            .features-block__text
+              p Система рассчитывает более 30&nbsp;готовых показателей, и&nbsp;мы&nbsp;готовы оперативно добавлять новые, если они вам потребуются.
+              p Проявлять гибкий подход нам позволяет&nbsp;то, что над Commito работает команда с&nbsp;более, чем 10&nbsp;летним опытом разработки программных продуктов.

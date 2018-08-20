@@ -1,5 +1,6 @@
 .section-roles {
-  margin-bottom: 100px;
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
 .roles-tabs {
@@ -14,10 +15,10 @@
     border-radius: 100px;
     color: #B2B7C0;
     display: block;
-    font-size: 19px;
+    font-size: rem(19);
     font-weight: 500;
-    margin: 0 2.1rem;
-    padding: 0.813rem 1.63rem;
+    margin: 0 rem(34);
+    padding: rem(13) rem(26);
 
     &.active {
       background-color: #F0F6FB;
@@ -39,58 +40,59 @@
   flex-direction: column;
   height: 410px;
   justify-content: flex-end;
+  margin-left: 45px;
 }
 
 .roles-side-speech {
-  margin-bottom: 1rem;
+  margin-bottom: rem(16);
 
   &__head {
     color: $light;
-    margin-bottom: 0.35rem;
-    padding-left: 1.8125rem;
+    margin-bottom: rem(6);
+    padding-left: rem(29);
   }
 
   &__body {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.25rem;
+    margin-bottom: rem(20);
   }
 
   &__item {
     background-color: #F0F6FB;
-    border-radius: 0.5rem 1.8125rem 1.8125rem 0.5rem;
+    border-radius: rem(8) rem(29) rem(29) rem(8);
     color: $headings-color;
-    font-size: 19px;
+    font-size: rem(19);
     line-height: 1.58;
-    padding: 0.875rem 1.8125rem;
+    padding: rem(14) rem(29);
 
     + .roles-side-speech__item {
       margin-top: 4px;
     }
 
     &:first-child {
-      border-top-left-radius: 1.8125rem;
+      border-top-left-radius: rem(29);
     }
 
     &:last-child {
-      border-bottom-left-radius: 1.8125rem;
+      border-bottom-left-radius: rem(29);
     }
 
     &:first-child:last-child {
-      border-radius: 1.8125rem
+      border-radius: rem(29);
     }
   }
 
   &__load {
     display: flex;
-    padding-left: 1.8125rem;
+    padding-left: rem(29);
 
     .loading-dot {
       @include size(12px);
       background-color: #E7F1F8;
       border-radius: 50%;
-      margin-right: 15px;
+      margin-right: rem(15);
     }
   }
 }
@@ -102,7 +104,7 @@
   &__pic {
     @include size(129px);
     border-radius: 50%;
-    margin: 0 auto 1rem;
+    margin: 0 auto rem(16);
     overflow: hidden;
 
     img {
@@ -112,9 +114,9 @@
 
   &__name {
     color: $headings-color;
-    font-size: 1.4375rem;
+    font-size: rem(23);
     font-weight: 500;
-    margin-bottom: 0.2rem;
+    margin-bottom: rem(3);
   }
 
   &__post {
@@ -123,5 +125,5 @@
 }
 
 .roles-screenshot {
-  margin-left: -52px;
+  margin-left: -30px;
 }

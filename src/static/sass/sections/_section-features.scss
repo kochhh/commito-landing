@@ -1,26 +1,95 @@
 .section-features {
-  padding-top: 115px;
-  padding-bottom: 115px;
+  overflow: hidden;
+}
+
+.features-block {
   position: relative;
 
-  &::before {
-    background-image: url('../i/general/features-back.svg');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    content: '';
-    height: 0;
-    left: 0;
-    padding-top: percentage(1020/1366);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
+  &__pretitle {
+    color: $green;
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: 1.47;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 0.82em;
+  }
+
+  &__text {
+    font-size: rem(19);
+    line-height: 1.58;
+    margin-bottom: 2.15em;
+  }
+
+  &--knowledge {
+    padding-top: 170px;
+    padding-bottom: 180px;
+
+    > .container {
+      position: relative;
+    }
+
+    .features-block-content {
+      margin-right: 30px;
+    }
+
+    .features-block-decor {
+      left: 590px;
+      top: -130px;
+
+      &::before {
+        @include size(1360px, 864px);
+        background-image: url('../i/general/features-knowledge-decor.svg');
+        background-repeat: no-repeat;
+        content: '';
+        left: 72px;
+        position: absolute;
+        top: -45px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &--customization {
+    padding-top: 175px;
+    padding-bottom: 500px;
+
+    &::before {
+      background-image: url('../i/general/features-customization-decor.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      content: '';
+      height: 1066px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: -55px;
+      z-index: -1;
+    }
+
+    .features-block-pic {
+      margin: 60px 0 0 -35px;
+    }
+
+    .features-block-content {
+      margin-left: -10px;
+    }
+
+    .features-block__title {
+      margin-bottom: 1.1em;
+    }
+
+    .features-block__text {
+      columns: 2;
+      column-gap: $grid-gutter-width;
+      width: 92%;
+    }
   }
 }
 
-.features-pills {
-  .nav-link {
-
-  }
+.features-block-decor {
+  position: absolute;
 }
