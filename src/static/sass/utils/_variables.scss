@@ -165,9 +165,9 @@ $body-color:                $light;
 // //
 // // Style anchor elements.
 
-$link-color:                $purple;
+$link-color:                $green;
 $link-decoration:           none;
-$link-hover-color:          $purple;
+$link-hover-color:          lighten($green, 10%);
 $link-hover-decoration:     none;
 
 // // Paragraphs

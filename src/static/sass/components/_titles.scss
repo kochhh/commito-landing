@@ -4,3 +4,16 @@
   font-weight: 700;
   line-height: $headings-line-height;
 }
+
+.module {
+  color: $green;
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: 1.47;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: rem(16);
+  line-height: 1.5625;
+}

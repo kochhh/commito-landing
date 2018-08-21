@@ -1,0 +1,151 @@
+.section-integrations {
+  margin-top: -218px;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+.integrations-content {
+  position: relative;
+  top: 206px;
+  width: 450px;
+
+  .module {
+    margin-bottom: 35px;
+  }
+
+  .title {
+    margin-bottom: 0.85em;
+  }
+
+  .text {
+    margin-right: 100px;
+  }
+}
+
+.integrations-list {
+  height: 1316px;
+  position: relative;
+
+  &::before {
+    background-image: url('../i/general/integrations-decor.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    height: 1316px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  > .container {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.integrations-item {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+  &--bitrix24 {
+    @include size(190px);
+    left: 83.5%;
+    top: 8.7%;
+    img { width: percentage(145 / 190); }
+  }
+
+  &--mailchimp {
+    @include size(164px);
+    left: 42.8%;
+    top: 25.5%;
+    img { width: percentage(82 / 164); }
+  }
+
+  &--megaplan {
+    @include size(148px);
+    left: 71.5%;
+    top: 29.8%;
+    img { width: percentage(105 / 148); }
+  }
+
+  &--amocrm {
+    @include size(164px);
+    left: 28.9%;
+    top: 46.1%;
+    img { width: percentage(114 / 164); }
+  }
+
+  &--asana {
+    @include size(120px);
+    left: 58.6%;
+    top: 47.9%;
+    img { width: percentage(74 / 120); }
+  }
+
+  &--trello {
+    left: 83.5%;
+    top: 50.4%;
+    @include size(148px);
+    img { width: percentage(70 / 148); }
+  }
+
+  &--jira {
+    left: 0.8%;
+    top: 61.2%;
+    @include size(176px);
+    img { width: percentage(95 / 176); }
+  }
+
+  &--1s {
+    left: 26.2%;
+    top: 71.6%;
+    @include size(148px);
+    img { width: percentage(94 / 148); }
+  }
+
+  &--slack {
+    left: 52.8%;
+    top: 66.4%;
+    @include size(192px);
+    img { width: percentage(93 / 192); }
+  }
+
+  &--pipedrive {
+    left: 10.9%;
+    top: 90.6%;
+    @include size(165px);
+    img { width: percentage(117 / 165); }
+  }
+
+  &--pizza {
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.04);
+    left: 80%;
+    top: 81.5%;
+    @include size(139px);
+    img { width: percentage(52 / 139); }
+  }
+
+  &__note {
+    color: $light;
+    font-size: 1rem;
+    line-height: 1.5625;
+    margin-top: 80px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    text-align: right;
+    width: rem(288);
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -6,13 +6,8 @@
 .features-block {
   position: relative;
 
-  &__pretitle {
-    color: $green;
-    font-size: rem(15);
-    font-weight: 500;
-    line-height: 1.47;
+  &__module {
     margin-bottom: 1.5em;
-    text-transform: uppercase;
   }
 
   &__title {
@@ -20,8 +15,7 @@
   }
 
   &__text {
-    font-size: rem(16);
-    line-height: 1.5625;
+    margin-right: 40px;
     margin-bottom: 2.15em;
   }
 
@@ -52,15 +46,10 @@
     .features-block-content {
       margin-right: 30px;
     }
-
-    .features-block__text {
-      margin-right: rem(16);
-    }
   }
 
   &--customization {
     padding-top: 170px;
-    padding-bottom: 500px;
 
     &::before {
       background-image: url('../i/general/features-customization-decor.svg');
@@ -86,6 +75,7 @@
     .features-block__text {
       columns: 2 auto;
       column-gap: $grid-gutter-width;
+      margin-right: 0;
       width: 592px;
 
       p {
@@ -94,8 +84,93 @@
       }
     }
   }
+
+  &--widgets {
+    padding-top: 60px;
+
+    .features-block-content {
+      margin-top: 200px;
+    }
+
+    .features-block__title {
+      color: #FFF;
+    }
+
+    .features-block__text {
+      color: #C0D0DE;
+    }
+
+    .features-block-pic {
+      margin-left: 20px;
+    }
+  }
+
+  &--integrations {
+    padding-top: 105px;
+    padding-bottom: 200px;
+
+    > .container {
+      position: relative;
+    }
+
+    .features-block-decor {
+      left: -118px;
+      top: -48px;
+
+      &::before {
+        @include size(964px, 1295px);
+        background-image: url('../i/general/features-integrations-decor.svg');
+        background-repeat: no-repeat;
+        content: '';
+        left: -218px;
+        position: absolute;
+        top: -755px;
+        z-index: -1;
+      }
+
+      .decor-orb {
+        @include size(57px);
+        background-image: linear-gradient(60deg, rgba(#C463BE, 1) 0%, rgba(#C463BE, 1) 22%, rgba(#C463BE, 0) 100%);
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        left: 256px;
+        position: absolute;
+        top: -676px;
+      }
+    }
+  }
 }
 
 .features-block-decor {
   position: absolute;
+}
+
+.customization-content {
+  margin-bottom: 65px;
+}
+
+.customization-schemes {
+  height: 294px;
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+
+  img {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.features-block-footer {
+  text-align: center;
+
+  &__button {
+    margin-bottom: 15px;
+  }
+
+  &__note {
+    color: $light;
+    font-size: rem(15);
+  }
 }
