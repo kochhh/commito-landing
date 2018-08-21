@@ -1,41 +1,53 @@
 .section-system {
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 120px;
 }
 
-.system {
-  height: 928px;
-  margin-top: 70px;
+.section-system-title {
+  font-size: rem(36);
+  margin-bottom: 0.85em;
   position: relative;
+  text-align: center;
+  z-index: 2;
+}
 
-  &::before {
-    @include size(1144px, 982px);
-    @include absolute-center;
-    background-image: url('../i/general/system-spot.svg');
-    background-repeat: no-repeat;
-    content: '';
-    margin: 20px 0 0 -477px;
-  }
+.system-labels {
+  @include list-unstyled;
+  display: flex;
+  margin-bottom: 10px;
 
-  > .container {
-    height: 100%;
-    position: relative;
+  &__item {
+    color: $light;
+    font-size: 1rem;
+    text-align: center;
+    width: 33.3333%;
   }
 }
 
-.system-decor {
-  @include size(1232px, 1249px);
+.system-container {
+  height: 596px;
+  position: relative;
+}
+
+.system-spot {
+  @include size(853px, 701px);
+  @include absolute-center;
+  background-image: url('../i/general/system-spot.svg');
+  background-repeat: no-repeat;
+  margin: 66px 0 0 -440px;
+}
+
+.system-waves {
+  @include size(1256px);
   @include absolute-center;
   background-image: url('../i/general/system-waves.svg');
   background-repeat: no-repeat;
 }
 
 .system-core {
-  @include size(590px, 408px);
+  @include size(452px, 314px);
   @include absolute-center;
-  margin: -4px 0 0 -38px;
-}
-
-.system-items {
+  margin: -4px 0 0 -20px;
 }
 
 .system-item {
@@ -46,7 +58,7 @@
   white-space: nowrap;
 
   &__icon {
-    @include size(100px);
+    @include size(85px);
     align-items: center;
     background-color: #fff;
     border-radius: 50%;
@@ -57,9 +69,8 @@
 
   &__name {
     color: $purple;
-    font-size: rem(19);
+    font-size: rem(15);
     font-weight: 500;
-    line-height: 1.58;
     margin-left: 24px;
   }
 
@@ -69,57 +80,57 @@
     flex-direction: row-reverse;
 
     .system-item__icon {
-      @include size(120px);
+      @include size(102px);
       box-shadow: 0 30px 40px rgba(0, 0, 0, 0.08);
     }
 
     .system-item__name {
       color: $light;
-      margin: 0 28px 0 0;
+      margin: 0 24px 0 0;
       text-align: right;
     }
   }
 
-  &--assessment {
-    margin-left: -530px;
-    top: 148px;
+  &--item-1 {
+    margin-left: -34.5%;
+    top: 13.5%;
 
     .system-item__icon img {
-      transform: translate(0, 3px);
+      transform: translate(-1px, 3px);
     }
   }
 
-  &--crm {
-    margin-left: -466px;
-    top: 364px;
+  &--item-2 {
+    margin-left: -49%;
+    top: 30%;
   }
 
-  &--telephony {
-    margin-left: -576px;
-    top: 556px;
+  &--item-3 {
+    margin-left: -36%;
+    top: 54%;
   }
 
-  &--trackers {
-    margin-left: -372px;
-    top: 707px;
+  &--item-4 {
+    margin-left: -44%;
+    top: 80%;
 
     .system-item__icon img {
       transform: translate(4px, 1px);
     }
   }
 
-  &--account {
-    margin-left: 180px;
-    top: 97px;
+  &--item-5 {
+    margin-left: 16.5%;
+    top: 14.5%;
   }
 
-  &--reports {
-    margin-left: 332px;
-    top: 388px;
+  &--item-6 {
+    margin-left: 29%;
+    top: 45%;
   }
 
-  &--informer {
-    margin-left: 234px;
-    top: 694px;
+  &--item-7 {
+    margin-left: 21.5%;
+    top: 80%;
   }
 }

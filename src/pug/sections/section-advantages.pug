@@ -2,7 +2,7 @@ section.section.section-advantages
   .section-advantages-inner
     .container
       .row.no-gutters
-        .col-6
+        .col-3.offset-1
           .nav.advantages-pills#advantagesPills(role="tablist" aria-orientation="vertical")
             a.nav-link.advantages-pill.active#pill-forecast(data-toggle="pill" href="#forecast" role="tab" aria-controls="forecast" aria-selected="false")
               .advantages-pill__icon
@@ -20,17 +20,17 @@ section.section.section-advantages
               .advantages-pill__icon
                 img(src="./static/i/general/icon-advantages-settings.svg" alt="")
               .advantages-pill__name Гибкие настройки доступа
-        .col-18
+        .col-8
           .advantages-content.tab-content#advantagesContent
             .tab-pane.fade.show.active#forecast(role="tabpanel" aria-labelledby="pill-forecast")
               .advantages-screenshot
-                img(src="./static/i/content/advantages-screenshot-forecast.jpg" alt="")
+                img(src="./static/i/content/advantages-screenshot-forecast.jpg" srcset="./static/i/content/advantages-screenshot-forecast.jpg 1x, ./static/i/content/advantages-screenshot-forecast@2x.jpg 2x" alt="")
             .tab-pane.fade#history(role="tabpanel" aria-labelledby="pill-history")
               .advantages-screenshot
-                img(src="./static/i/content/advantages-screenshot-history.jpg" alt="")
+                img(src="./static/i/content/advantages-screenshot-history.jpg" srcset="./static/i/content/advantages-screenshot-history.jpg 1x, ./static/i/content/advantages-screenshot-history@2x.jpg 2x" alt="")
             .tab-pane.fade#purposes(role="tabpanel" aria-labelledby="pill-purposes")
               .advantages-screenshot
-                img(src="./static/i/content/advantages-screenshot-purposes.jpg" alt="")
+                img(src="./static/i/content/advantages-screenshot-purposes.jpg" srcset="./static/i/content/advantages-screenshot-purposes.jpg 1x, ./static/i/content/advantages-screenshot-purposes@2x.jpg 2x" alt="")
             .tab-pane.fade#settings(role="tabpanel" aria-labelledby="pill-settings")
               .advantages-screenshot
-                img(src="./static/i/content/advantages-screenshot-settings.jpg" alt="")
+                img(src="./static/i/content/advantages-screenshot-settings.jpg" srcset="./static/i/content/advantages-screenshot-settings.jpg 1x, ./static/i/content/advantages-screenshot-settings@2x.jpg 2x" alt="")

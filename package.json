@@ -1,14 +1,14 @@
 {
-  "name": "noname-markup",
+  "name": "commito-landing",
   "version": "1.0.0",
-  "description": "...",
+  "description": "Landing page markup for Commito",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/kochhh/commito-landing"
   },
   "keywords": [],
   "author": "Konstantin Kochurov (himamma@gmail.com)",

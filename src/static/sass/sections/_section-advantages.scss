@@ -1,5 +1,6 @@
 .section-advantages {
   padding-top: 70px;
+  padding-bottom: 70px;
   position: relative;
 
   &::before {
@@ -19,20 +20,16 @@
 
 .section-advantages-inner {
   overflow: hidden;
-  padding-top: 115px;
-  padding-bottom: 80px;
-}
-
-.advantages-pills {
-  margin-left: 45px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .advantages-pill {
   border-radius: rem(16);
   color: $light;
   display: block;
-  margin-bottom: rem(18);
-  padding: rem(32) rem(34) rem(24);
+  margin-left: -(rem(34));
+  padding: rem(28) rem(34) rem(24);
   width: 255px;
 
   &__icon {
@@ -57,7 +54,7 @@
 }
 
 .advantages-screenshot {
-  margin-left: 60px;
+  // margin-left: 60px;
 
   img {
     border-radius: rem(16);

@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="navbar"><a class="navbar-brand" href="#"><img src="./static/i/general/logo.svg" alt="Commito"></a>
+      <div class="navbar"><a class="navbar-brand" href="#"><img src="./static/i/general/logo.svg" width="230" height="37" alt="Commito"></a>
         <div class="navbar-side">
           <button class="btn btn-auth btn-signup" type="button">Регистрация</button>
           <button class="btn btn-auth btn-login" type="button">Вход</button>
@@ -29,26 +29,46 @@
   </header>
   <main class="main">
     <section class="section section-intro">
-      <div class="container">
-        <div class="intro-container row no-gutters">
-          <div class="col-8 offset-1">
-            <div class="intro-content">
-              <div class="intro-title">Изменяйте KPI автоматически</div>
-              <div class="intro-text">Развивайте сотрудников и платите зарплату по факту</div>
-              <div class="intro-button"><a class="btn btn-intro" href="#">Начать сейчас</a></div>
+      <div class="section-intro-inner">
+        <div class="container">
+          <div class="intro-container row no-gutters">
+            <div class="col-4 offset-1">
+              <div class="intro-content">
+                <div class="intro-title">Изменяйте KPI автоматически</div>
+                <div class="intro-text">Развивайте сотрудников и платите зарплату по факту</div>
+                <div class="intro-button"><a class="btn btn-intro" href="#">Начать сейчас</a></div>
+              </div>
+            </div>
+            <div class="col-6 offset-1">
+              <div class="intro-screenshot"><span class="intro-screenshot-wrap"><img src="./static/i/content/intro-screenshot.jpg" srcset="./static/i/content/intro-screenshot.jpg 1x, ./static/i/content/intro-screenshot@2x.jpg 2x" alt=""></span></div>
             </div>
           </div>
-          <div class="col-12 offset-3">
-            <div class="intro-screenshot"><img src="./static/i/content/intro-screenshot.jpg" alt=""></div>
+          <div class="intro-social"><a class="intro-social__link" href="#"><i class="fab fa-facebook-f"></i></a><a class="intro-social__link" href="#"><i class="fab fa-vk"></i></a><a class="intro-social__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+          <div class="intro-scroll-tip">
+            <div class="intro-scroll-tip__inner">
+              <svg class="icon icon-arrow-left">
+                <use xlink:href="./static/i/svg/symbol/sprite.svg#arrow-left"></use>
+              </svg>scroll down
+            </div>
           </div>
         </div>
-        <div class="intro-social"><a class="intro-social__link" href="#"><i class="fab fa-facebook-f"></i></a><a class="intro-social__link" href="#"><i class="fab fa-vk"></i></a><a class="intro-social__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
-        <div class="intro-scroll-tip">
-          <div class="intro-scroll-tip__inner">
-            <svg class="icon icon-arrow-left">
-              <use xlink:href="./static/i/svg/symbol/sprite.svg#arrow-left"></use>
-            </svg>scroll down
-          </div>
+        <div class="intro-orbs">
+          <div class="intro-orb intro-orb--item-1"></div>
+          <div class="intro-orb intro-orb--item-2"></div>
+          <div class="intro-orb intro-orb--item-3"></div>
+          <div class="intro-orb intro-orb--item-4"></div>
+          <div class="intro-orb intro-orb--item-5"></div>
+          <div class="intro-orb intro-orb--item-6"></div>
+        </div>
+        <div class="intro-dots">
+          <div class="intro-dot intro-dot--item-1"></div>
+          <div class="intro-dot intro-dot--item-2"></div>
+          <div class="intro-dot intro-dot--item-3"></div>
+          <div class="intro-dot intro-dot--item-4"></div>
+          <div class="intro-dot intro-dot--item-5"></div>
+          <div class="intro-dot intro-dot--item-6"></div>
+          <div class="intro-dot intro-dot--item-7"></div>
+          <div class="intro-dot intro-dot--item-8"></div>
         </div>
       </div>
     </section>
@@ -61,8 +81,8 @@
       <div class="roles-content tab-content" id="rolesContent">
         <div class="tab-pane fade show active" id="head" role="tabpanel" aria-labelledby="tab-head">
           <div class="container">
-            <div class="row">
-              <div class="col-8">
+            <div class="row no-gutters">
+              <div class="col-3 offset-1">
                 <div class="roles-side">
                   <div class="roles-side-speech">
                     <div class="roles-side-speech__head">Андрей, 17:34</div>
@@ -78,7 +98,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-16">
+              <div class="col-8">
                 <div class="roles-screenshot"><img src="./static/i/content/roles-head-screenshot.jpg" alt=""></div>
               </div>
             </div>
@@ -86,8 +106,8 @@
         </div>
         <div class="tab-pane fade" id="associate" role="tabpanel" aria-labelledby="tab-associate">
           <div class="container">
-            <div class="row">
-              <div class="col-8">
+            <div class="row no-gutters">
+              <div class="col-3 offset-1">
                 <div class="roles-side">
                   <div class="roles-side-speech">
                     <div class="roles-side-speech__head">Андрей, 17:34</div>
@@ -104,7 +124,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-16">
+              <div class="col-8">
                 <div class="roles-screenshot"><img src="./static/i/content/roles-associate-screenshot.jpg" alt=""></div>
               </div>
             </div>
@@ -112,8 +132,8 @@
         </div>
         <div class="tab-pane fade" id="accountant" role="tabpanel" aria-labelledby="tab-accountant">
           <div class="container">
-            <div class="row">
-              <div class="col-8">
+            <div class="row no-gutters">
+              <div class="col-3 offset-1">
                 <div class="roles-side">
                   <div class="roles-side-speech">
                     <div class="roles-side-speech__head">Андрей, 17:34</div>
@@ -129,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-16">
+              <div class="col-8">
                 <div class="roles-screenshot"><img src="./static/i/content/roles-accountant-screenshot.jpg" alt=""></div>
               </div>
             </div>
@@ -138,41 +158,47 @@
       </div>
     </section>
     <section class="section section-system">
-      <div class="container">
-        <div class="title section-title">Как работает Commito</div>
-      </div>
       <div class="system">
-        <div class="system-decor"></div>
         <div class="container">
-          <div class="system-core"><img src="./static/i/general/system-core.png" width="590" height="408" alt=""></div>
-          <div class="system-items">
-            <div class="system-item system-item--assessment">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-assessment.svg" alt=""></div>
-              <div class="system-item__name">Системы<br>ассесмента</div>
-            </div>
-            <div class="system-item system-item--crm">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-crm.svg" alt=""></div>
-              <div class="system-item__name">CRM</div>
-            </div>
-            <div class="system-item system-item--telephony">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-telephony.svg" alt=""></div>
-              <div class="system-item__name">Телефония</div>
-            </div>
-            <div class="system-item system-item--trackers">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-trackers.svg" alt=""></div>
-              <div class="system-item__name">Трекеры<br>задач</div>
-            </div>
-            <div class="system-item system-item--account">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-account.svg" alt=""></div>
-              <div class="system-item__name">ЛК Commito</div>
-            </div>
-            <div class="system-item system-item--reports">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-reports.svg" alt=""></div>
-              <div class="system-item__name">Отчёты<br>по e-mail</div>
-            </div>
-            <div class="system-item system-item--informer">
-              <div class="system-item__icon"><img src="./static/i/general/icon-system-informer.svg" alt=""></div>
-              <div class="system-item__name">Информер<br>в CRM</div>
+          <div class="title section-system-title">Как работает Commito</div>
+          <ul class="system-labels">
+            <li class="system-labels__item">Импорт данных</li>
+            <li class="system-labels__item">Расчёт показателей</li>
+            <li class="system-labels__item">Контроль показателей</li>
+          </ul>
+          <div class="system-container">
+            <div class="system-spot"></div>
+            <div class="system-waves"></div>
+            <div class="system-core"><img src="./static/i/general/system-core.png" srcset="./static/i/general/system-core.png 1x, ./static/i/general/system-core@2x.png 2x" alt=""></div>
+            <div class="system-items">
+              <div class="system-item system-item--item-1">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-assessment.svg" alt=""></div>
+                <div class="system-item__name">Системы<br>ассесмента</div>
+              </div>
+              <div class="system-item system-item--item-2">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-telephony.svg" alt=""></div>
+                <div class="system-item__name">Телефония</div>
+              </div>
+              <div class="system-item system-item--item-3">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-crm.svg" alt=""></div>
+                <div class="system-item__name">CRM</div>
+              </div>
+              <div class="system-item system-item--item-4">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-trackers.svg" alt=""></div>
+                <div class="system-item__name">Трекеры<br>задач</div>
+              </div>
+              <div class="system-item system-item--item-5">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-account.svg" alt=""></div>
+                <div class="system-item__name">ЛК Commito</div>
+              </div>
+              <div class="system-item system-item--item-6">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-reports.svg" alt=""></div>
+                <div class="system-item__name">Отчёты<br>по e-mail</div>
+              </div>
+              <div class="system-item system-item--item-7">
+                <div class="system-item__icon"><img src="./static/i/general/icon-system-informer.svg" alt=""></div>
+                <div class="system-item__name">Информер<br>в CRM</div>
+              </div>
             </div>
           </div>
         </div>
@@ -182,7 +208,7 @@
       <div class="section-advantages-inner">
         <div class="container">
           <div class="row no-gutters">
-            <div class="col-6">
+            <div class="col-3 offset-1">
               <div class="nav advantages-pills" id="advantagesPills" role="tablist" aria-orientation="vertical"><a class="nav-link advantages-pill active" id="pill-forecast" data-toggle="pill" href="#forecast" role="tab" aria-controls="forecast" aria-selected="false">
                   <div class="advantages-pill__icon"><img src="./static/i/general/icon-advantages-forecast.svg" alt=""></div>
                   <div class="advantages-pill__name">Прогноз даже в начале и середине месяца</div></a><a class="nav-link advantages-pill" id="pill-history" data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="false">
@@ -193,19 +219,19 @@
                   <div class="advantages-pill__icon"><img src="./static/i/general/icon-advantages-settings.svg" alt=""></div>
                   <div class="advantages-pill__name">Гибкие настройки доступа</div></a></div>
             </div>
-            <div class="col-18">
+            <div class="col-8">
               <div class="advantages-content tab-content" id="advantagesContent">
                 <div class="tab-pane fade show active" id="forecast" role="tabpanel" aria-labelledby="pill-forecast">
-                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-forecast.jpg" alt=""></div>
+                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-forecast.jpg" srcset="./static/i/content/advantages-screenshot-forecast.jpg 1x, ./static/i/content/advantages-screenshot-forecast@2x.jpg 2x" alt=""></div>
                 </div>
                 <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="pill-history">
-                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-history.jpg" alt=""></div>
+                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-history.jpg" srcset="./static/i/content/advantages-screenshot-history.jpg 1x, ./static/i/content/advantages-screenshot-history@2x.jpg 2x" alt=""></div>
                 </div>
                 <div class="tab-pane fade" id="purposes" role="tabpanel" aria-labelledby="pill-purposes">
-                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-purposes.jpg" alt=""></div>
+                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-purposes.jpg" srcset="./static/i/content/advantages-screenshot-purposes.jpg 1x, ./static/i/content/advantages-screenshot-purposes@2x.jpg 2x" alt=""></div>
                 </div>
                 <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="pill-settings">
-                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-settings.jpg" alt=""></div>
+                  <div class="advantages-screenshot"><img src="./static/i/content/advantages-screenshot-settings.jpg" srcset="./static/i/content/advantages-screenshot-settings.jpg 1x, ./static/i/content/advantages-screenshot-settings@2x.jpg 2x" alt=""></div>
                 </div>
               </div>
             </div>
@@ -216,9 +242,9 @@
     <section class="section section-features">
       <div class="features-block features-block--knowledge">
         <div class="container">
-          <div class="features-block-decor"><img src="./static/i/general/features-knowledge-pic.png" width="828" height="804" alt=""></div>
+          <div class="features-block-decor"><img src="./static/i/general/features-knowledge-pic.png" srcset="./static/i/general/features-knowledge-pic.png 1x, ./static/i/general/features-knowledge-pic@2x.png 2x" alt=""></div>
           <div class="row">
-            <div class="col-12">
+            <div class="col-5 offset-1">
               <div class="features-block-content">
                 <div class="features-block__pretitle">Шаблоны KPI и база знаний</div>
                 <div class="features-block__title title">Вы&nbsp;справитесь, даже если не&nbsp;сталкивались с&nbsp;KPI</div>
@@ -233,10 +259,10 @@
       <div class="features-block features-block--customization">
         <div class="container">
           <div class="row no-gutters">
-            <div class="col-10">
-              <div class="features-block-pic"><img src="./static/i/general/features-customization-pic.png" width="417" height="256" alt=""></div>
+            <div class="col-5">
+              <div class="features-block-pic"><img src="./static/i/general/features-customization-pic.png" srcset="./static/i/general/features-customization-pic.png 1x, ./static/i/general/features-customization-pic@2x.png 2x" alt=""></div>
             </div>
-            <div class="col-14">
+            <div class="col-7">
               <div class="features-block-content">
                 <div class="features-block__pretitle">Индивидуальная доработка Commito для вас</div>
                 <div class="features-block__title title">Учтем все тонкости ваших<br>бизнес-процессов</div>

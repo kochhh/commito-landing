@@ -1,23 +1,41 @@
 section.section.section-intro
-  .container
-    .intro-container.row.no-gutters
-      .col-8.offset-1
-        .intro-content
-          .intro-title Изменяйте KPI автоматически
-          .intro-text Развивайте сотрудников и платите зарплату по факту
-          .intro-button
-            a.btn.btn-intro(href="#") Начать сейчас
-      .col-12.offset-3
-        .intro-screenshot
-          img(src="./static/i/content/intro-screenshot.jpg" alt="")
-    .intro-social
-      a.intro-social__link(href="#")
-        i.fab.fa-facebook-f
-      a.intro-social__link(href="#")
-        i.fab.fa-vk
-      a.intro-social__link(href="#")
-        i.fab.fa-google-plus-g
-    .intro-scroll-tip
-      .intro-scroll-tip__inner
-        +icon("arrow-left")
-        | scroll down
+  .section-intro-inner
+    .container
+      .intro-container.row.no-gutters
+        .col-4.offset-1
+          .intro-content
+            .intro-title Изменяйте KPI автоматически
+            .intro-text Развивайте сотрудников и платите зарплату по факту
+            .intro-button
+              a.btn.btn-intro(href="#") Начать сейчас
+        .col-6.offset-1
+          .intro-screenshot
+            span.intro-screenshot-wrap
+              img(src="./static/i/content/intro-screenshot.jpg" srcset="./static/i/content/intro-screenshot.jpg 1x, ./static/i/content/intro-screenshot@2x.jpg 2x" alt="")
+      .intro-social
+        a.intro-social__link(href="#")
+          i.fab.fa-facebook-f
+        a.intro-social__link(href="#")
+          i.fab.fa-vk
+        a.intro-social__link(href="#")
+          i.fab.fa-google-plus-g
+      .intro-scroll-tip
+        .intro-scroll-tip__inner
+          +icon("arrow-left")
+          | scroll down
+    .intro-orbs
+      .intro-orb.intro-orb--item-1
+      .intro-orb.intro-orb--item-2
+      .intro-orb.intro-orb--item-3
+      .intro-orb.intro-orb--item-4
+      .intro-orb.intro-orb--item-5
+      .intro-orb.intro-orb--item-6
+    .intro-dots
+      .intro-dot.intro-dot--item-1
+      .intro-dot.intro-dot--item-2
+      .intro-dot.intro-dot--item-3
+      .intro-dot.intro-dot--item-4
+      .intro-dot.intro-dot--item-5
+      .intro-dot.intro-dot--item-6
+      .intro-dot.intro-dot--item-7
+      .intro-dot.intro-dot--item-8

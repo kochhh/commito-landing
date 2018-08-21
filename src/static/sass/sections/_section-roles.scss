@@ -1,6 +1,6 @@
 .section-roles {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .roles-tabs {
@@ -9,7 +9,7 @@
 .roles-nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   .nav-link {
     border-radius: 100px;
@@ -40,23 +40,21 @@
   flex-direction: column;
   height: 410px;
   justify-content: flex-end;
-  margin-left: 45px;
 }
 
 .roles-side-speech {
-  margin-bottom: rem(16);
+  margin-bottom: 20px;
 
   &__head {
     color: $light;
-    margin-bottom: rem(6);
-    padding-left: rem(29);
+    margin-bottom: 0.375em;
   }
 
   &__body {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-bottom: rem(20);
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -65,6 +63,7 @@
     color: $headings-color;
     font-size: rem(19);
     line-height: 1.58;
+    margin-left: -(rem(29));
     padding: rem(14) rem(29);
 
     + .roles-side-speech__item {
@@ -86,20 +85,19 @@
 
   &__load {
     display: flex;
-    padding-left: rem(29);
 
     .loading-dot {
       @include size(12px);
       background-color: #E7F1F8;
       border-radius: 50%;
-      margin-right: rem(15);
+      margin-right: 15px;
     }
   }
 }
 
 .roles-side-person {
   text-align: center;
-  width: 264px;
+  width: 184px;
 
   &__pic {
     @include size(129px);
@@ -122,8 +120,4 @@
   &__post {
     color: #AAB2BC;
   }
-}
-
-.roles-screenshot {
-  margin-left: -30px;
 }
