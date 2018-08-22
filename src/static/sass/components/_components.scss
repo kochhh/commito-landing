@@ -34,3 +34,40 @@
     display: block;
   }
 }
+
+.socials {
+  display: flex;
+
+  &__link {
+    @include size(32px);
+    align-items: center;
+    border-radius: 50%;
+    color: $purple;
+    display: flex;
+    font-size: rem(16);
+    justify-content: center;
+    position: relative;
+
+    + .socials__link {
+      margin-left: 20px;
+    }
+
+    &::before {
+      @include absolute-all(0);
+      border: 2px solid rgba($purple, 0.17);
+      border-radius: 50%;
+      content: '';
+      transition: $transition-base;
+      z-index: -1;
+    }
+
+    &:hover {
+      background-color: rgba($purple, 0.17);
+      color: $purple;
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}

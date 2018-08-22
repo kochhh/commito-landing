@@ -12,6 +12,5 @@ $font-root-path: "../fonts/";
 }
 
 @include fontFace(Geometria, "geometria-webfont", 400);
-@include fontFace(Geometria, "geometria-light-webfont", 300);
 @include fontFace(Geometria, "geometria-medium-webfont", 500);
 @include fontFace(Geometria, "geometria-bold-webfont", 700);

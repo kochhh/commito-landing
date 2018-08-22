@@ -1,0 +1,139 @@
+.section-reviews {
+  overflow: hidden;
+  padding-top: 115px;
+  padding-bottom: 100px;
+}
+
+.reviews-header {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+
+  .title {
+    margin-bottom: 1em;
+  }
+}
+
+.reviews-slider {
+  margin: -40px 0 0 35px;
+  padding: 40px 40px 0;
+  position: relative;
+  width: 480px;
+
+  &::before {
+    background-image: linear-gradient(to right, $body-bg 0, $body-bg 9980px, rgba($body-bg, 0) 100%);
+    bottom: -80px;
+    content: '';
+    margin-right: -20px;
+    position: absolute;
+    right: 100%;
+    top: -40px;
+    width: 10000px;
+    z-index: 1;
+  }
+
+  .carousel-cell {
+    margin-right: 28px;
+    width: 100%;
+  }
+
+  .flickity-viewport {
+    overflow: visible;
+  }
+
+  .flickity-prev-next-button {
+    @include size(40px);
+    background-color: transparent;
+    padding: 0;
+    top: -35px;
+    transform: none;
+    transition: all 0.15s linear;
+
+    &:hover {
+      background-color: #EDF1FA;
+
+      .flickity-button-icon {
+        fill: $green;
+      }
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 40px;
+  }
+
+  .flickity-prev-next-button.next {
+    left: 100px;
+    right: auto;
+  }
+
+  .flickity-button-icon {
+    $left: (100 - percentage(18/40))/2;
+    $top: (100 - percentage(16/40))/2;
+    @include size(percentage(18/40), percentage(16/40));
+    fill: $light;
+    left: $left;
+    top: $top;
+    transition: all 0.15s linear;
+  }
+}
+
+.reviews-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: rem(40);
+
+  &__head {
+    align-items: center;
+    display: flex;
+    margin-bottom: rem(35);
+  }
+
+  &__person-pic {
+    margin-right: 25px;
+    position: relative;
+
+    img {
+      border-radius: 50%;
+    }
+
+    .src-icon {
+      @include size(26px);
+      align-items: center;
+      border-radius: 50%;
+      bottom: 0;
+      color: #fff;
+      display: flex;
+      font-size: rem(15);
+      justify-content: center;
+      position: absolute;
+      right: 0;
+
+      &--facebook { background-color: $bc-facebook; }
+      &--twitter { background-color: $bc-twitter; }
+      &--vk { background-color: $bc-vkontakte; }
+      &--google-plus { background-color: $bc-google-plus; }
+    }
+  }
+
+  &__name {
+    color: $headings-color;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: $headings-line-height;
+    margin-bottom: 0.45em;
+  }
+
+  &__post {
+    color: $light;
+    font-size: rem(14);
+    line-height: 1.286;
+  }
+
+  &__content {
+    color: $light;
+    font-size: rem(16);
+    line-height: 1.5625;
+  }
+}
