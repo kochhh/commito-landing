@@ -1560,6 +1560,7 @@ body {
     background-image: url("../i/general/footer-pic.png");
     width: 2600px;
     height: 271px;
+    background-repeat: no-repeat;
     bottom: 0;
     content: '';
     left: 50%;
@@ -2089,8 +2090,7 @@ a {
       margin-right: 15px; }
 
 .roles-side-person {
-  text-align: center;
-  width: 204px; }
+  text-align: center; }
   .roles-side-person__pic {
     width: 129px;
     height: 129px;
@@ -2127,6 +2127,7 @@ a {
   .system-labels__item {
     color: #8A929D;
     font-size: 1rem;
+    font-weight: 500;
     text-align: center;
     width: 33.3333%; }
 
@@ -2185,7 +2186,6 @@ a {
   .system-item__name {
     color: #8892CF;
     font-size: 0.9375rem;
-    font-weight: 500;
     margin-left: 24px; }
   .system-item:nth-child(5), .system-item:nth-child(6), .system-item:nth-child(7) {
     flex-direction: row-reverse; }
@@ -2550,7 +2550,7 @@ a {
     background-image: linear-gradient(to right, #FCFCFF 0, #FCFCFF 9980px, rgba(252, 252, 255, 0) 100%);
     bottom: -80px;
     content: '';
-    margin-right: -20px;
+    margin-right: -35px;
     position: absolute;
     right: 100%;
     top: -40px;
@@ -2590,7 +2590,7 @@ a {
 .reviews-item {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
   padding: 2.5rem; }
   .reviews-item__head {
     align-items: center;

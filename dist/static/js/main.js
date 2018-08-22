@@ -1,6 +1,12 @@
 $(function() {
   svg4everybody();
 
+  personsPicsAdjust();
+
+  $('#rolesNav').find('.nav-link').on('shown.bs.tab', function(e) {
+    personsPicsAdjust();
+  });
+
   var $reviews = $('.reviews-slider').flickity({
     // wrapAround: true,
     pageDots: false,
@@ -17,3 +23,10 @@ $(function() {
     $reviews.flickity('next');
   });
 });
+
+function personsPicsAdjust() {
+  $('.roles-side-person').each(function() {
+    var $el = $(this).prev().find('.roles-side-speech__item').eq(0);
+    $(this).css('width', Math.round($el.width()) + 'px');
+  });
+}

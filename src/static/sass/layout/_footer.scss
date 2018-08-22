@@ -26,6 +26,7 @@
   &::after {
     @include img-retina('../i/general/footer-pic.png', '../i/general/footer-pic@2x.png', 2600px, 271px);
     @include size(2600px, 271px);
+    background-repeat: no-repeat;
     bottom: 0;
     content: '';
     left: 50%;

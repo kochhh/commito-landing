@@ -24,7 +24,7 @@
     background-image: linear-gradient(to right, $body-bg 0, $body-bg 9980px, rgba($body-bg, 0) 100%);
     bottom: -80px;
     content: '';
-    margin-right: -20px;
+    margin-right: -35px;
     position: absolute;
     right: 100%;
     top: -40px;
@@ -81,7 +81,7 @@
 .reviews-item {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
   padding: rem(40);
 
   &__head {
