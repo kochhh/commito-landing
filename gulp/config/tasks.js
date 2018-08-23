@@ -7,6 +7,7 @@ module.exports = [
 	'./gulp/tasks/pug',
 	'./gulp/tasks/fonts',
 	'./gulp/tasks/styles',
-	'./gulp/tasks/styles-legacy',
-	'./gulp/tasks/scripts'
+	// './gulp/tasks/styles-legacy',
+	'./gulp/tasks/scripts',
+	'./gulp/tasks/favicon'
 ];
