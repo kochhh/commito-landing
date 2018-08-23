@@ -4,7 +4,7 @@
   color: $white;
   overflow: hidden;
   padding-top: 178px;
-  padding-bottom: 130px;
+  padding-bottom: 60px;
   position: relative;
   z-index: 1;
 
@@ -36,6 +36,10 @@
   }
 }
 
+.footer-content {
+  margin-bottom: 10px;
+}
+
 .footer-logo {
   margin-bottom: 36px;
 }
@@ -46,7 +50,14 @@
 }
 
 .footer-unit {
-  margin-right: 20px;
+  &--1 {
+    margin-left: 45px;
+  }
+
+  &--2 {
+    margin-left: 82px;
+    margin-right: 40px;
+  }
 }
 
 .footer-menu-title {
@@ -61,6 +72,10 @@
     &:hover {
       color: #fff;
     }
+  }
+
+  &--partners {
+    margin-bottom: 0;
   }
 }
 
@@ -77,6 +92,8 @@
 .footer-link {
   color: #fff;
   opacity: 0.55;
+  backface-visibility: hidden;
+  transform: translateZ(0) scale(1.0, 1.0);
 
   &:hover {
     color: #fff;
@@ -111,6 +128,24 @@
 
     &:hover {
       color: #fff;
+    }
+  }
+}
+
+.footer-payment {
+  &__label {
+    font-size: rem(14);
+    margin-bottom: 15px;
+    opacity: 0.55;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+
+    img {
+      margin-right: 30px;
+      max-height: 28px;
     }
   }
 }

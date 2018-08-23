@@ -1,9 +1,16 @@
 .header {
   left: 0;
+  // position: fixed;
   position: absolute;
   top: 0;
+  // transform: translateY(0);
+  // transition: transform 0.3s;
   width: 100%;
   z-index: $zindex-fixed;
+
+  // &.is-hidden {
+  //   transform: translateY(-100%);
+  // }
 }
 
 .navbar {
@@ -15,19 +22,39 @@
   position: relative;
 }
 
-.navbar-side {
+.navbar-left {
+  margin-right: auto;
+}
+
+.navbar-right {
   display: flex;
   margin-left: auto;
-
-  &__item {
-    margin-left: 30px;
-  }
 }
 
 .navbar-brand {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+}
+
+.navbar-phone {
+  font-size: 17px;
+  font-weight: 500;
+
+  a {
+    color: #fff !important;
+  }
+
+  .icon-phone {
+    @include size(16px);
+    fill: #fff;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .number {
+    vertical-align: middle;
+  }
 }
 
 .navbar-lang {

@@ -3,7 +3,12 @@ header.header
     .navbar
       a.navbar-brand(href="#")
         img(src="./static/i/general/logo.svg" width="230" height="37" alt="Commito")
-      .navbar-side
+      .navbar-left
+        .navbar-phone
+          a(href="#")
+            +icon('phone')
+            span.number +7 (495) 787 68 57
+      .navbar-right
         button.btn.btn-auth.btn-signup(type="button") Регистрация
         button.btn.btn-auth.btn-login(type="button") Вход
         .navbar-lang.dropdown

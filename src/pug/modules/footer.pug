@@ -1,13 +1,13 @@
 footer.footer
   .container
-    .row
+    .footer-content.row
       .col-3
         .footer-logo
           a(href="#")
             img(src="./static/i/general/logo.svg" width="230" height="37" alt="Commito")
         .copyright © Commito 2018
       .col-3
-        .footer-unit
+        .footer-unit.footer-unit--1
           .footer-menu-title Продукт
           ul.footer-menu
             li.footer-menu__item
@@ -20,8 +20,8 @@ footer.footer
               a.footer-link.footer-menu__link(href="#") Встраиваемые информеры
             li.footer-menu__item
               a.footer-link.footer-menu__link(href="#") Интеграции и API
-      .col-3
-        .footer-unit
+      .col-4
+        .footer-unit.footer-unit--2
           .footer-menu-title О компании
           ul.footer-menu
             li.footer-menu__item
@@ -30,18 +30,25 @@ footer.footer
               a.footer-link.footer-menu__link(href="#") Лицензионное соглашение
             li.footer-menu__item
               a.footer-link.footer-menu__link(href="#") Политика конфиденциальности
-          .footer-menu-title
+            li.footer-menu__item
+              a.footer-link.footer-menu__link(href="#") Безопасность платежей
+          .footer-menu-title.footer-menu-title--partners
             a.footer-menu-title__link(href="#") Партнёрская программа
-      .col-3
-        .footer-unit
-          .contacts-number
-            a.contacts-number__link(href="#") +7 (495) 787 68 57
-          .contacts-email
-            a.footer-link.contacts-email__link(href="mailto:support@commito.ru") support@commito.ru
-          .socials.footer-socials
-            a.socials__link(href="#")
-              i.fab.fa-facebook-f
-            a.socials__link(href="#")
-              i.fab.fa-vk
-            a.socials__link(href="#")
-              i.fab.fa-google-plus-g
+      .col-2
+        .contacts-number
+          a.contacts-number__link(href="#") +7 (495) 787 68 57
+        .contacts-email
+          a.footer-link.contacts-email__link(href="mailto:support@commito.ru") support@commito.ru
+        .socials.footer-socials
+          a.socials__link(href="#")
+            i.fab.fa-facebook-f
+          a.socials__link(href="#")
+            i.fab.fa-vk
+          a.socials__link(href="#")
+            i.fab.fa-google-plus-g
+    .footer-payment
+      .footer-payment__label К оплате принимаем:
+      .footer-payment__list
+        img(src="./static/i/general/logo-visa.svg" alt="")
+        img(src="./static/i/general/logo-mastercard.svg" alt="")
+        img(src="./static/i/general/logo-mir.svg" alt="")

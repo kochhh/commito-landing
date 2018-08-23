@@ -1,9 +1,12 @@
 .section-roles {
   padding-top: 70px;
   padding-bottom: 70px;
-}
 
-.roles-tabs {
+  // crutch for 1px blue line
+  background-color: $body-bg;
+  margin-top: -1px;
+  position: relative;
+  z-index: 1;
 }
 
 .roles-nav {

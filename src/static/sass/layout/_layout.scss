@@ -1,8 +1,24 @@
+// html,
+// body {
+//   height: 100%;
+// }
+
 body {
-  min-width: get-container-max-width(xl);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+body,
+.header {
+  // temporary for non-responsive
+  min-width: 1280px;
+}
+
+// .wrapper {
+//   height: 100%;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// }
 
 .container {
   min-width: get-container-max-width(xl);

@@ -1492,9 +1492,12 @@ https://flickity.metafizzy.co
 * may be freely distributed under the MIT license.
 */
 body {
-  min-width: 1224px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
+
+body,
+.header {
+  min-width: 1280px; }
 
 .container {
   min-width: 1224px; }
@@ -1514,17 +1517,32 @@ body {
   padding-bottom: 64px;
   position: relative; }
 
-.navbar-side {
+.navbar-left {
+  margin-right: auto; }
+
+.navbar-right {
   display: flex;
   margin-left: auto; }
-  .navbar-side__item {
-    margin-left: 30px; }
 
 .navbar-brand {
   left: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
+
+.navbar-phone {
+  font-size: 17px;
+  font-weight: 500; }
+  .navbar-phone a {
+    color: #fff !important; }
+  .navbar-phone .icon-phone {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+    margin-right: 6px;
+    vertical-align: middle; }
+  .navbar-phone .number {
+    vertical-align: middle; }
 
 .navbar-lang {
   margin-left: 12px; }
@@ -1540,7 +1558,7 @@ body {
   color: #fff;
   overflow: hidden;
   padding-top: 178px;
-  padding-bottom: 130px;
+  padding-bottom: 60px;
   position: relative;
   z-index: 1; }
   .footer::before {
@@ -1573,6 +1591,9 @@ body {
         background-image: url("../i/general/footer-pic@2x.png");
         background-size: 2600px 271px; } }
 
+.footer-content {
+  margin-bottom: 10px; }
+
 .footer-logo {
   margin-bottom: 36px; }
 
@@ -1580,8 +1601,12 @@ body {
   font-size: 0.875rem;
   opacity: 0.55; }
 
-.footer-unit {
-  margin-right: 20px; }
+.footer-unit--1 {
+  margin-left: 45px; }
+
+.footer-unit--2 {
+  margin-left: 82px;
+  margin-right: 40px; }
 
 .footer-menu-title {
   font-size: 1.375rem;
@@ -1592,6 +1617,8 @@ body {
     color: #fff; }
     .footer-menu-title__link:hover {
       color: #fff; }
+  .footer-menu-title--partners {
+    margin-bottom: 0; }
 
 .footer-menu {
   padding-left: 0;
@@ -1603,7 +1630,11 @@ body {
 
 .footer-link {
   color: #fff;
-  opacity: 0.55; }
+  opacity: 0.55;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+          transform: translateZ(0) scale(1, 1); }
   .footer-link:hover {
     color: #fff;
     opacity: 1; }
@@ -1628,6 +1659,18 @@ body {
     margin-left: 30px; }
   .footer-socials .socials__link:hover {
     color: #fff; }
+
+.footer-payment__label {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  opacity: 0.55; }
+
+.footer-payment__list {
+  align-items: center;
+  display: flex; }
+  .footer-payment__list img {
+    margin-right: 30px;
+    max-height: 28px; }
 
 a {
   transition: all 0.2s ease-in-out; }
@@ -1836,7 +1879,7 @@ a {
 .section-intro-inner {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1920px;
+  max-width: 1600px;
   padding-top: 180px;
   padding-bottom: 140px;
   position: relative; }
@@ -1844,8 +1887,8 @@ a {
     padding-bottom: 115px;
     position: relative; }
 
-.intro-content {
-  margin-top: 75px; }
+.intro-container {
+  align-items: center; }
 
 .intro-title {
   font-size: 2.375rem;
@@ -2025,7 +2068,11 @@ a {
 
 .section-roles {
   padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-bottom: 70px;
+  background-color: #FCFCFF;
+  margin-top: -1px;
+  position: relative;
+  z-index: 1; }
 
 .roles-nav {
   display: flex;
@@ -2429,6 +2476,17 @@ a {
   .integrations-list > .container {
     height: 100%;
     position: relative; }
+  .integrations-list .decor-orb {
+    width: 82px;
+    height: 82px;
+    background-image: linear-gradient(45deg, #c463be 0%, rgba(196, 99, 190, 0) 92%);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    bottom: 152px;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    left: -94px;
+    position: absolute; }
 
 .integrations-item {
   align-items: center;

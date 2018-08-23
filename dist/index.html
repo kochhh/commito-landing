@@ -12,7 +12,13 @@
   <header class="header">
     <div class="container">
       <div class="navbar"><a class="navbar-brand" href="#"><img src="./static/i/general/logo.svg" width="230" height="37" alt="Commito"></a>
-        <div class="navbar-side">
+        <div class="navbar-left">
+          <div class="navbar-phone"><a href="#">
+              <svg class="icon icon-phone">
+                <use xlink:href="./static/i/svg/symbol/sprite.svg#phone"></use>
+              </svg><span class="number">+7 (495) 787 68 57</span></a></div>
+        </div>
+        <div class="navbar-right">
           <button class="btn btn-auth btn-signup" type="button">Регистрация</button>
           <button class="btn btn-auth btn-login" type="button">Вход</button>
           <div class="navbar-lang dropdown">
@@ -92,7 +98,7 @@
                     <div class="roles-side-speech__load"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>
                   </div>
                   <div class="roles-side-person">
-                    <div class="roles-side-person__pic"><img src="http://picsum.photos/258/258?photo=1" alt=""></div>
+                    <div class="roles-side-person__pic"><img src="./static/i/content/person-andrey.jpg" srcset="./static/i/content/person-andrey.jpg 1x, ./static/i/content/person-andrey@2x.jpg 2x" alt="" role="presentation"></div>
                     <div class="roles-side-person__name">Андрей</div>
                     <div class="roles-side-person__post">Управляющий партнёр</div>
                   </div>
@@ -118,7 +124,7 @@
                     <div class="roles-side-speech__load"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>
                   </div>
                   <div class="roles-side-person">
-                    <div class="roles-side-person__pic"><img src="http://picsum.photos/258/258?photo=2" alt=""></div>
+                    <div class="roles-side-person__pic"><img src="./static/i/content/person-pavel.jpg" srcset="./static/i/content/person-pavel.jpg 1x, ./static/i/content/person-pavel@2x.jpg 2x" alt="" role="presentation"></div>
                     <div class="roles-side-person__name">Павел</div>
                     <div class="roles-side-person__post">Менеджер по&nbsp;продажам</div>
                   </div>
@@ -143,7 +149,7 @@
                     <div class="roles-side-speech__load"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>
                   </div>
                   <div class="roles-side-person">
-                    <div class="roles-side-person__pic"><img src="http://picsum.photos/258/258?photo=3" alt=""></div>
+                    <div class="roles-side-person__pic"><img src="./static/i/content/person-ekaterina.jpg" srcset="./static/i/content/person-ekaterina.jpg 1x, ./static/i/content/person-ekaterina@2x.jpg 2x" alt="" role="presentation"></div>
                     <div class="roles-side-person__name">Екатерина</div>
                     <div class="roles-side-person__post">Бухгалтер</div>
                   </div>
@@ -320,6 +326,7 @@
     <section class="section section-integrations">
       <div class="integrations-list">
         <div class="container">
+          <div class="decor-orb"></div>
           <div class="integrations-content">
             <div class="module"><img src="./static/i/general/icon-available-integrations.svg" alt=""></div>
             <div class="title">Доступные интеграции</div>
@@ -420,13 +427,13 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="row">
+      <div class="footer-content row">
         <div class="col-3">
           <div class="footer-logo"><a href="#"><img src="./static/i/general/logo.svg" width="230" height="37" alt="Commito"></a></div>
           <div class="copyright">© Commito 2018</div>
         </div>
         <div class="col-3">
-          <div class="footer-unit">
+          <div class="footer-unit footer-unit--1">
             <div class="footer-menu-title">Продукт</div>
             <ul class="footer-menu">
               <li class="footer-menu__item"><a class="footer-link footer-menu__link" href="#">Расчёт KPI и зарплаты</a></li>
@@ -437,24 +444,27 @@
             </ul>
           </div>
         </div>
-        <div class="col-3">
-          <div class="footer-unit">
+        <div class="col-4">
+          <div class="footer-unit footer-unit--2">
             <div class="footer-menu-title">О компании</div>
             <ul class="footer-menu">
               <li class="footer-menu__item"><a class="footer-link footer-menu__link" href="#">Контакты</a></li>
               <li class="footer-menu__item"><a class="footer-link footer-menu__link" href="#">Лицензионное соглашение</a></li>
               <li class="footer-menu__item"><a class="footer-link footer-menu__link" href="#">Политика конфиденциальности</a></li>
+              <li class="footer-menu__item"><a class="footer-link footer-menu__link" href="#">Безопасность платежей</a></li>
             </ul>
-            <div class="footer-menu-title"><a class="footer-menu-title__link" href="#">Партнёрская программа</a></div>
+            <div class="footer-menu-title footer-menu-title--partners"><a class="footer-menu-title__link" href="#">Партнёрская программа</a></div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="footer-unit">
-            <div class="contacts-number"><a class="contacts-number__link" href="#">+7 (495) 787 68 57</a></div>
-            <div class="contacts-email"><a class="footer-link contacts-email__link" href="mailto:support@commito.ru">support@commito.ru</a></div>
-            <div class="socials footer-socials"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#"><i class="fab fa-vk"></i></a><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
-          </div>
+        <div class="col-2">
+          <div class="contacts-number"><a class="contacts-number__link" href="#">+7 (495) 787 68 57</a></div>
+          <div class="contacts-email"><a class="footer-link contacts-email__link" href="mailto:support@commito.ru">support@commito.ru</a></div>
+          <div class="socials footer-socials"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#"><i class="fab fa-vk"></i></a><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
         </div>
+      </div>
+      <div class="footer-payment">
+        <div class="footer-payment__label">К оплате принимаем:</div>
+        <div class="footer-payment__list"><img src="./static/i/general/logo-visa.svg" alt=""><img src="./static/i/general/logo-mastercard.svg" alt=""><img src="./static/i/general/logo-mir.svg" alt=""></div>
       </div>
     </div>
   </footer>
