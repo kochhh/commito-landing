@@ -15,6 +15,10 @@
   margin-left: 30px;
   padding: rem(11) rem(18);
   position: relative;
+
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($purple, .5);
+  }
 }
 
 .btn-signup {
@@ -81,4 +85,35 @@
   font-weight: 700;
   line-height: 1.25;
   padding: rem(14) rem(30);
+}
+
+.btn-popup {
+  color: #fff !important;
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: 18px;
+  padding: rem(10) rem(20);
+  position: relative;
+
+  .fab {
+    font-size: rem(16);
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    width: 20px;
+  }
+
+  &--login {
+    width: 132px;
+  }
+
+  &--vk {
+    @include button-variant($background: $bc-vkontakte, $border: $bc-vkontakte, $hover-background: darken($bc-vkontakte, 7.5%), $active-background: darken($bc-vkontakte, 10%));
+  }
+
+  &--facebook {
+    @include button-variant($background: $bc-facebook, $border: $bc-facebook, $hover-background: darken($bc-facebook, 7.5%), $active-background: darken($bc-facebook, 10%));
+  }
 }

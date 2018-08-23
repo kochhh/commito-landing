@@ -19,8 +19,8 @@
               </svg><span class="number">+7 (495) 787 68 57</span></a></div>
         </div>
         <div class="navbar-right">
-          <button class="btn btn-auth btn-signup" type="button">Регистрация</button>
-          <button class="btn btn-auth btn-login" type="button">Вход</button>
+          <button class="btn btn-auth btn-signup" id="landing-register-action" type="button" data-toggle="modal" data-target="#popup-auth">Регистрация</button>
+          <button class="btn btn-auth btn-login" id="landing-login-action" type="button" data-toggle="modal" data-target="#popup-auth">Вход</button>
           <div class="navbar-lang dropdown">
             <button class="btn btn-lang-toggle dropdown-toggle" id="langDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="lang-flag" src="./static/i/general/flags/ru.svg" alt="Русский">
               <svg class="icon icon-caret">
@@ -42,14 +42,14 @@
               <div class="intro-content">
                 <div class="intro-title">Изменяйте KPI автоматически</div>
                 <div class="intro-text">Развивайте сотрудников и платите зарплату по факту</div>
-                <div class="intro-button"><a class="btn btn-intro" href="#">Начать сейчас</a></div>
+                <div class="intro-button"><a class="btn btn-intro js-start-action" href="#" data-toggle="modal" data-target="#popup-auth">Начать сейчас</a></div>
               </div>
             </div>
             <div class="col-6 offset-1">
               <div class="intro-screenshot"><span class="intro-screenshot-wrap"><img src="./static/i/content/intro-screenshot.jpg" srcset="./static/i/content/intro-screenshot.jpg 1x, ./static/i/content/intro-screenshot@2x.jpg 2x" alt="" role="presentation"></span></div>
             </div>
           </div>
-          <div class="socials intro-socials"><a class="socials__link" href="https://www.facebook.com/commitokpi"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#"><i class="fab fa-vk"></i></a><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+          <div class="socials intro-socials"><a class="socials__link" href="https://www.facebook.com/commitokpi" title="Facebook"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#" title="VK"><i class="fab fa-vk"></i></a><a class="socials__link" href="#" title="YouTube"><i class="fab fa-youtube"></i></a></div>
           <div class="intro-scroll-tip">
             <div class="intro-scroll-tip__inner">
               <svg class="icon icon-arrow-left">
@@ -256,7 +256,7 @@
                 <div class="features-block__title title">Вы&nbsp;справитесь, даже если не&nbsp;сталкивались с&nbsp;KPI</div>
                 <div class="features-block__text text">
                   <p>Показатели эффективности, используемые в&nbsp;системе, разработаны на&nbsp;основе реального опыта внедрений KPI в&nbsp;различных компаниях. Даже если для вас это первый опыт внедрения, для вас оно пройдёт легко и&nbsp;прозрачно. Для этого в&nbsp;системе есть шаблоны схем мотивации для различных отраслей и&nbsp;отделов, а&nbsp;также база знаний с&nbsp;описанием лучших практик по&nbsp;использованию KPI.</p>
-                </div><a class="btn btn-primary" href="#">Попробовать бесплатно</a>
+                </div><a class="btn btn-primary js-start-action" href="#" data-toggle="modal" data-target="#popup-auth">Попробовать бесплатно</a>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@
         </div>
         <div class="customization-schemes"><img src="./static/i/general/customization-schemes.png" srcset="./static/i/general/customization-schemes.png 1x, ./static/i/general/customization-schemes@2x.png 2x" alt="" role="presentation"></div>
         <div class="features-block-footer">
-          <div class="features-block-footer__button"><a class="btn btn-primary" href="#">Попробовать</a></div>
+          <div class="features-block-footer__button"><a class="btn btn-primary js-start-action" href="#" data-toggle="modal" data-target="#popup-auth">Попробовать</a></div>
           <div class="features-block-footer__note">14 дней бесплатно</div>
         </div>
       </div>
@@ -459,7 +459,7 @@
         <div class="col-2">
           <div class="contacts-number"><a class="contacts-number__link" href="#">+7 (495) 787 68 57</a></div>
           <div class="contacts-email"><a class="footer-link contacts-email__link" href="mailto:support@commito.ru">support@commito.ru</a></div>
-          <div class="socials footer-socials"><a class="socials__link" href="https://www.facebook.com/commitokpi"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#"><i class="fab fa-vk"></i></a><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+          <div class="socials footer-socials"><a class="socials__link" href="https://www.facebook.com/commitokpi" title="Facebook"><i class="fab fa-facebook-f"></i></a><a class="socials__link" href="#" title="VK"><i class="fab fa-vk"></i></a><a class="socials__link" href="#" title="YouTube"><i class="fab fa-youtube"></i></a></div>
         </div>
       </div>
       <div class="footer-payment">
@@ -468,6 +468,70 @@
       </div>
     </div>
   </footer>
+  <div class="modal fade" id="popup-auth" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="sr-only" aria-hidden="true">&times;</span></button>
+        <div class="modal-header">
+          <ul class="nav modal-tabs" id="landing-actions-list" role="tablist">
+            <li class="modal-tabs__item" role="presentation"><a class="modal-tabs__link" id="auth-input-tab" href="#auth-input" role="tab" data-toggle="tab" aria-controls="auth-input" aria-selected="false">Вход</a></li>
+            <li class="modal-tabs__item" role="presentation"><a class="modal-tabs__link" id="auth-registration-tab" href="#auth-registration" role="tab" data-toggle="tab" aria-controls="auth-registration" aria-selected="false">Регистрация</a></li>
+          </ul>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content modal-tab-content">
+            <div class="tab-pane modal-tab-pane fade" id="auth-input" role="tabpanel" aria-labelledby="auth-input-tab">
+              <form class="js_user_login_form b-popup-auth" method="post">
+                <div class="form-group">
+                  <label class="sr-only" for="login_email">E-mail</label>
+                  <input class="form-control js_email" id="login_email" type="email" name="email" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="popup-auth-password">Пароль</label>
+                  <input class="form-control js_password" id="popup-auth-password" type="password" name="password" placeholder="Пароль"><span class="error-text"></span>
+                </div>
+                <div class="form-group">
+                  <div class="error-text js_glob_error"></div>
+                </div>
+                <div class="form-group form-group--login"><a class="link-forgot-password js_show_user_recovery_password_form" href="#">Забыли пароль?</a>
+                  <button class="btn btn-primary btn-popup btn-popup--login hs_login_btn" id="hs_login_btn" type="button">Войти</button>
+                </div>
+                <div class="form-group form-group--or"><span>или</span></div>
+                <div class="form-group form-group--oauth"><a class="btn btn-popup btn-popup--vk btn-block js_call_sn_auth" href="#" data-sn="vk"><i class="fab fa-vk"></i>Войти через ВКонтакте</a></div>
+                <div class="form-group form-group--oauth"><a class="btn btn-popup btn-popup--facebook btn-block js_call_sn_auth" href="#" data-sn="fb"><i class="fab fa-facebook-f"></i>Войти через Facebook</a></div>
+              </form>
+            </div>
+            <div class="tab-pane modal-tab-pane fade" id="auth-registration" role="tabpanel" aria-labelledby="auth-registration-tab">
+              <form class="js_user_register_form" method="post">
+                <div class="form-group">
+                  <label class="sr-only" for="register_email_field">E-mail</label>
+                  <input class="form-control is-invalid js_email" id="register_email_field" type="email" name="email" placeholder="E-mail">
+                  <div class="invalid-feedback">Этот e-mail уже зарегистрирован</div>
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="register_pass_field">Пароль</label>
+                  <input class="form-control js_password" id="register_pass_field" type="password" name="password" placeholder="Пароль">
+                </div>
+                <div class="form-group form-group--agree">
+                  <div class="form-check">
+                    <input class="form-check-input is-invalid js_rules_agreement" id="popup-auth-check" type="checkbox" name="rules_agreement">
+                    <label class="form-check-label" for="popup-auth-check">Согласен(на) с&nbsp;условиями <a href="#">оферты </a>и&nbsp;<a href="#">политики конфиденциальности</a></label>
+                    <div class="invalid-feedback">Вы не согласились с правилами оказания услуг</div>
+                  </div><span class="error-text"></span>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-popup btn-block" type="submit">Зарегистрироваться</button>
+                </div>
+                <div class="form-group form-group--or"><span>или</span></div>
+                <div class="form-group form-group--oauth"><a class="btn btn-popup btn-popup--vk btn-block js_call_sn_auth" href="#" data-sn="vk"><i class="fab fa-vk"></i>Войти через ВКонтакте</a></div>
+                <div class="form-group form-group--oauth"><a class="btn btn-popup btn-popup--facebook btn-block js_call_sn_auth" href="#" data-sn="fb"><i class="fab fa-facebook-f"></i>Войти через Facebook</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./static/js/libs.min.js"></script>
   <script src="./static/js/main.js"></script>
 </body>

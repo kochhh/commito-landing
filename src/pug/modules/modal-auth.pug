@@ -1,0 +1,68 @@
+.modal.fade#popup-auth(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      button.close(type="button" data-dismiss="modal" aria-label="Close")
+        span.sr-only(aria-hidden="true") &times;
+      .modal-header
+        ul.nav.modal-tabs#landing-actions-list(role="tablist")
+          li.modal-tabs__item(role="presentation")
+            a.modal-tabs__link#auth-input-tab(href="#auth-input" role="tab" data-toggle="tab"  aria-controls="auth-input" aria-selected="false") Вход
+          li.modal-tabs__item(role="presentation")
+            a.modal-tabs__link#auth-registration-tab(href="#auth-registration" role="tab" data-toggle="tab" aria-controls="auth-registration" aria-selected="false") Регистрация
+      .modal-body
+        .tab-content.modal-tab-content
+          .tab-pane.modal-tab-pane.fade#auth-input(role="tabpanel" aria-labelledby="auth-input-tab")
+            form.js_user_login_form.b-popup-auth(method="post")
+              .form-group
+                label.sr-only(for="login_email") E-mail
+                input.form-control.js_email#login_email(type="email" name="email" placeholder="E-mail")
+              .form-group
+                label.sr-only(for="popup-auth-password") Пароль
+                input.form-control.js_password#popup-auth-password(type="password" name="password" placeholder="Пароль")
+                span.error-text
+              .form-group
+                .error-text.js_glob_error
+              .form-group.form-group--login
+                a.link-forgot-password.js_show_user_recovery_password_form(href="#") Забыли пароль?
+                button.btn.btn-primary.btn-popup.btn-popup--login.hs_login_btn#hs_login_btn(type="button") Войти
+              .form-group.form-group--or
+                span или
+              .form-group.form-group--oauth
+                a.btn.btn-popup.btn-popup--vk.btn-block.js_call_sn_auth(href="#" data-sn="vk")
+                  i.fab.fa-vk
+                  | Войти через ВКонтакте
+              .form-group.form-group--oauth
+                a.btn.btn-popup.btn-popup--facebook.btn-block.js_call_sn_auth(href="#" data-sn="fb")
+                  i.fab.fa-facebook-f
+                  | Войти через Facebook
+          .tab-pane.modal-tab-pane.fade#auth-registration(role="tabpanel" aria-labelledby="auth-registration-tab")
+            form.js_user_register_form(method="post")
+              .form-group
+                label.sr-only(for="register_email_field") E-mail
+                input.form-control.is-invalid.js_email#register_email_field(type="email" name="email" placeholder="E-mail")
+                .invalid-feedback Этот e-mail уже зарегистрирован
+              .form-group
+                label.sr-only(for="register_pass_field") Пароль
+                input.form-control.js_password#register_pass_field(type="password" name="password" placeholder="Пароль")
+              .form-group.form-group--agree
+                .form-check
+                  input.form-check-input.is-invalid.js_rules_agreement#popup-auth-check(type="checkbox" name="rules_agreement")
+                  label.form-check-label(for="popup-auth-check")
+                    | Согласен(на) с&nbsp;условиями 
+                    a(href="#") оферты 
+                    | и&nbsp;
+                    a(href="#") политики конфиденциальности
+                  .invalid-feedback Вы не согласились с правилами оказания услуг
+                span.error-text
+              .form-group
+                button.btn.btn-primary.btn-popup.btn-block(type="submit") Зарегистрироваться
+              .form-group.form-group--or
+                span или
+              .form-group.form-group--oauth
+                a.btn.btn-popup.btn-popup--vk.btn-block.js_call_sn_auth(href="#" data-sn="vk")
+                  i.fab.fa-vk
+                  | Войти через ВКонтакте
+              .form-group.form-group--oauth
+                a.btn.btn-popup.btn-popup--facebook.btn-block.js_call_sn_auth(href="#" data-sn="fb")
+                  i.fab.fa-facebook-f
+                  | Войти через Facebook

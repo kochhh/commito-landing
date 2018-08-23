@@ -9,8 +9,8 @@ header.header
             +icon('phone')
             span.number +7 (495) 787 68 57
       .navbar-right
-        button.btn.btn-auth.btn-signup(type="button") Регистрация
-        button.btn.btn-auth.btn-login(type="button") Вход
+        button.btn.btn-auth.btn-signup#landing-register-action(type="button" data-toggle="modal" data-target="#popup-auth") Регистрация
+        button.btn.btn-auth.btn-login#landing-login-action(type="button" data-toggle="modal" data-target="#popup-auth") Вход
         .navbar-lang.dropdown
           button.btn.btn-lang-toggle.dropdown-toggle#langDropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             img.lang-flag(src="./static/i/general/flags/ru.svg" alt="Русский")
