@@ -1,7 +1,7 @@
-// html,
-// body {
-//   height: 100%;
-// }
+html,
+body {
+  height: 100%;
+}
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -10,16 +10,11 @@ body {
 
 body,
 .header {
-  // temporary for non-responsive
+  // TODO: temporary for non-responsive
   min-width: 1280px;
 }
 
-// .wrapper {
-//   height: 100%;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-// }
-
 .container {
+  // TODO: temporary for non-responsive
   min-width: get-container-max-width(xl);
 }

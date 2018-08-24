@@ -1,16 +1,64 @@
 .header {
   left: 0;
-  // position: fixed;
-  position: absolute;
+  position: fixed;
+  // position: absolute;
   top: 0;
   // transform: translateY(0);
-  // transition: transform 0.3s;
+  transition: top 0.3s ease-in-out;
   width: 100%;
   z-index: $zindex-fixed;
 
   // &.is-hidden {
   //   transform: translateY(-100%);
   // }
+
+  &.is-affixed {
+    backdrop-filter: blur(5px);
+    background-color: rgba(#fff, 0.78);
+
+    .navbar {
+      color: $dark;
+      justify-content: flex-end;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .navbar-brand {
+      @include size(63px, 33px);
+      background-image: url('../i/general/logo-affixed.svg');
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .navbar-left,
+    .navbar-right {
+      margin: 0;
+    }
+
+    .navbar-phone {
+      a {
+        color: $dark !important;
+      }
+
+      .icon-phone {
+        fill: $dark;
+      }
+    }
+
+    .btn-signup {
+      @include button-variant($background: $green, $border: $green, $hover-background: darken($green, 7.5%), $active-background: darken($green, 10%));
+      color: #fff !important;
+    }
+
+    .btn-login {
+      @include button-variant($background: rgba(#E3E9EC, 0), $border: #E3E9EC, $hover-background: #E3E9EC, $active-background: darken(#E3E9EC, 2%));
+      color: $dark !important;
+
+      &::before {
+        border-color: #E3E9EC;
+      }
+    }
+  }
 }
 
 .navbar {
@@ -20,6 +68,7 @@
   padding-top: 64px;
   padding-bottom: 64px;
   position: relative;
+  transition: all 0.35s;
 }
 
 .navbar-left {
@@ -32,13 +81,16 @@
 }
 
 .navbar-brand {
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
+  @include absolute-center;
+  @include size(230px, 37px);
+  background-image: url('../i/general/logo.svg');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  transition: none;
 }
 
 .navbar-phone {
-  font-size: 17px;
+  font-size: rem(17);
   font-weight: 500;
 
   a {

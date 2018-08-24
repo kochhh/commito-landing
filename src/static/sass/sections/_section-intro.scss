@@ -13,7 +13,7 @@
     background-size: 100% 100%;
     content: '';
     left: 0;
-    min-width: get-container-max-width(xl);
+    min-width: get-container-max-width(xl); // TODO: temporary for non-responsive
     position: absolute;
     right: 0;
     z-index: -1;

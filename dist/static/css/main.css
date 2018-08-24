@@ -2015,6 +2015,10 @@ https://flickity.metafizzy.co
 * (c) 2017 Pierre Reimertz
 * may be freely distributed under the MIT license.
 */
+html,
+body {
+  height: 100%; }
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
@@ -2028,10 +2032,82 @@ body,
 
 .header {
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
+  transition: top 0.3s ease-in-out;
   width: 100%;
   z-index: 1030; }
+  .header.is-affixed {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.78); }
+    .header.is-affixed .navbar {
+      color: #333E50;
+      justify-content: flex-end;
+      padding-top: 24px;
+      padding-bottom: 24px; }
+    .header.is-affixed .navbar-brand {
+      width: 63px;
+      height: 33px;
+      background-image: url("../i/general/logo-affixed.svg");
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+    .header.is-affixed .navbar-left,
+    .header.is-affixed .navbar-right {
+      margin: 0; }
+    .header.is-affixed .navbar-phone a {
+      color: #333E50 !important; }
+    .header.is-affixed .navbar-phone .icon-phone {
+      fill: #333E50; }
+    .header.is-affixed .btn-signup {
+      color: #212529;
+      background-color: #65D3AA;
+      border-color: #65D3AA;
+      color: #fff !important; }
+      .header.is-affixed .btn-signup:hover {
+        color: #212529;
+        background-color: #47cb9a;
+        border-color: #3dc894; }
+      .header.is-affixed .btn-signup:focus, .header.is-affixed .btn-signup.focus {
+        box-shadow: 0 0 0 0.2rem rgba(101, 211, 170, 0.5); }
+      .header.is-affixed .btn-signup.disabled, .header.is-affixed .btn-signup:disabled {
+        color: #212529;
+        background-color: #65D3AA;
+        border-color: #65D3AA; }
+      .header.is-affixed .btn-signup:not(:disabled):not(.disabled):active, .header.is-affixed .btn-signup:not(:disabled):not(.disabled).active,
+      .show > .header.is-affixed .btn-signup.dropdown-toggle {
+        color: #212529;
+        background-color: #3dc894;
+        border-color: #37c18e; }
+        .header.is-affixed .btn-signup:not(:disabled):not(.disabled):active:focus, .header.is-affixed .btn-signup:not(:disabled):not(.disabled).active:focus,
+        .show > .header.is-affixed .btn-signup.dropdown-toggle:focus {
+          box-shadow: 0 0 0 0.2rem rgba(101, 211, 170, 0.5); }
+    .header.is-affixed .btn-login {
+      color: #212529;
+      background-color: rgba(227, 233, 236, 0);
+      border-color: #E3E9EC;
+      color: #333E50 !important; }
+      .header.is-affixed .btn-login:hover {
+        color: #212529;
+        background-color: #E3E9EC;
+        border-color: #c5d1d7; }
+      .header.is-affixed .btn-login:focus, .header.is-affixed .btn-login.focus {
+        box-shadow: 0 0 0 0.2rem rgba(227, 233, 236, 0.5); }
+      .header.is-affixed .btn-login.disabled, .header.is-affixed .btn-login:disabled {
+        color: #212529;
+        background-color: rgba(227, 233, 236, 0);
+        border-color: #E3E9EC; }
+      .header.is-affixed .btn-login:not(:disabled):not(.disabled):active, .header.is-affixed .btn-login:not(:disabled):not(.disabled).active,
+      .show > .header.is-affixed .btn-login.dropdown-toggle {
+        color: #212529;
+        background-color: #dde4e8;
+        border-color: #bdcbd2; }
+        .header.is-affixed .btn-login:not(:disabled):not(.disabled):active:focus, .header.is-affixed .btn-login:not(:disabled):not(.disabled).active:focus,
+        .show > .header.is-affixed .btn-login.dropdown-toggle:focus {
+          box-shadow: 0 0 0 0.2rem rgba(227, 233, 236, 0.5); }
+      .header.is-affixed .btn-login::before {
+        border-color: #E3E9EC; }
 
 .navbar {
   align-items: center;
@@ -2039,7 +2115,8 @@ body,
   justify-content: space-between;
   padding-top: 64px;
   padding-bottom: 64px;
-  position: relative; }
+  position: relative;
+  transition: all 0.35s; }
 
 .navbar-left {
   margin-right: auto; }
@@ -2049,13 +2126,20 @@ body,
   margin-left: auto; }
 
 .navbar-brand {
-  left: 50%;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 230px;
+  height: 37px;
+  background-image: url("../i/general/logo.svg");
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  transition: none; }
 
 .navbar-phone {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 500; }
   .navbar-phone a {
     color: #fff !important; }
@@ -2214,8 +2298,10 @@ a {
   font-size: 1rem;
   line-height: 1.5625; }
 
-.btn:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus {
-  box-shadow: none !important; }
+.btn {
+  border: none; }
+  .btn:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus {
+    box-shadow: none !important; }
 
 .btn-auth {
   color: #8892CF;
@@ -2234,8 +2320,29 @@ a {
     background-color: rgba(22, 27, 66, 0.47); }
 
 .btn-login {
-  background-color: rgba(136, 146, 207, 0); }
-  .btn-login::after {
+  color: #fff;
+  background-color: rgba(136, 146, 207, 0);
+  border-color: #8892CF;
+  color: #8892CF !important; }
+  .btn-login:hover {
+    color: #fff;
+    background-color: rgba(136, 146, 207, 0.2);
+    border-color: #6471c0; }
+  .btn-login:focus, .btn-login.focus {
+    box-shadow: 0 0 0 0.2rem rgba(136, 146, 207, 0.5); }
+  .btn-login.disabled, .btn-login:disabled {
+    color: #fff;
+    background-color: rgba(136, 146, 207, 0);
+    border-color: #8892CF; }
+  .btn-login:not(:disabled):not(.disabled):active, .btn-login:not(:disabled):not(.disabled).active,
+  .show > .btn-login.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(136, 146, 207, 0.125);
+    border-color: #5b68bd; }
+    .btn-login:not(:disabled):not(.disabled):active:focus, .btn-login:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-login.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(136, 146, 207, 0.5); }
+  .btn-login::before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2246,10 +2353,8 @@ a {
     content: '';
     transition: opacity .15s ease-in-out;
     z-index: -1; }
-  .btn-login:hover {
-    background-color: rgba(136, 146, 207, 0.2); }
-    .btn-login:hover::after {
-      opacity: 0; }
+  .btn-login:hover::before {
+    opacity: 0; }
 
 .btn-lang-toggle {
   background-color: transparent;
@@ -2436,6 +2541,11 @@ a {
       color: #fff; }
       .socials__link:hover::before {
         opacity: 0; }
+
+.modal-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px; }
 
 .modal-content {
   border: none;

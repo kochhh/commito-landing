@@ -1,3 +1,10 @@
+.modal-dialog {
+  // TODO: temporary for non-responsive
+  margin-left: auto;
+  margin-right: auto;
+  width: $modal-md;
+}
+
 .modal-content {
   border: none;
   color: $dark;

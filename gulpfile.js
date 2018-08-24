@@ -16,7 +16,7 @@ $.path.task.forEach(function(taskPath) {
 
 $.gulp.task('dev', $.gulp.series(
   'clean',
-  $.gulp.parallel('styles:dev', 'pug', 'libsjs:dev', 'js:dev', 'js:copy', 'svg', 'img:dev', 'fonts', 'svg:copy')
+  $.gulp.parallel('styles:dev', 'pug', 'libsjs:build', 'js:dev', 'js:copy', 'svg', 'img:dev', 'fonts', 'svg:copy')
 ));
 
 $.gulp.task('build', $.gulp.series(

@@ -1,4 +1,6 @@
 .btn {
+  border: none;
+
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     &:focus {
@@ -30,9 +32,10 @@
 }
 
 .btn-login {
-  background-color: rgba($purple, 0);
+  @include button-variant($background: rgba($purple, 0), $border: $purple, $hover-background: rgba($purple, 0.2), $active-background: rgba($purple, 0.125));
+  color: $purple !important;
 
-  &::after {
+  &::before {
     @include absolute-all(0);
     border: 2px solid $purple;
     border-radius: $btn-border-radius;
@@ -42,9 +45,7 @@
   }
 
   &:hover {
-    background-color: rgba($purple, 0.2);
-
-    &::after {
+    &::before {
       opacity: 0;
     }
   }

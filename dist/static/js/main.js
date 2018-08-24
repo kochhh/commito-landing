@@ -1,6 +1,7 @@
 $(function() {
   svg4everybody();
   personsPicsAdjust();
+  $('.header').unveiledNavigation();
 
   var $reviews = $('.reviews-slider').flickity({
     // wrapAround: true,

@@ -16,7 +16,7 @@
     content: '';
     height: 74px;
     left: 0;
-    min-width: get-container-max-width(xl);
+    min-width: get-container-max-width(xl); // TODO: temporary for non-responsive
     position: absolute;
     right: 0;
     top: 0;
