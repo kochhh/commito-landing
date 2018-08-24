@@ -20,11 +20,11 @@
         /* PRIVATE FUNCTIONS            */
         /********************************/
 
-        var init = function(){
+        var init = function() {
             initListeners();
         };
 
-        var initListeners = function(){
+        var initListeners = function() {
             $(window).on('scroll', onWindowScroll);
             onWindowScroll();
         };
@@ -34,45 +34,43 @@
          * unveil
          * Unveils the navigation
          **/
-        this.unveil = function(){
-            // $this.animate(
-            //     {
-            //         top: 0
-            //     },{
-            //         step: function( now ){
-            //             top = now;
-            //         },
-            //         easing: opts.easing,
-            //         duration: opts.duration
-            //     }
-            // );
-            $this.css('top', 0);
+        this.unveil = function() {
+            $this.animate(
+                {
+                    top: 0
+                }, {
+                    step: function(now) {
+                        top = now;
+                    },
+                    easing: opts.easing,
+                    duration: opts.duration
+                }
+            );
         };
 
         /**
          * cover
          * covers the navigation
          **/
-        this.cover = function(){
-            // $this.animate(
-            //     {
-            //         top: -$this.outerHeight()
-            //     },{
-            //         step: function( now ){
-            //             top = now;
-            //         },
-            //         easing: opts.easing,
-            //         duration: opts.duration
-            //     }
-            // );
-            $this.css('top', -$this.outerHeight())
+        this.cover = function() {
+            $this.animate(
+                {
+                    top: -$this.outerHeight()
+                }, {
+                    step: function(now) {
+                        top = now;
+                    },
+                    easing: opts.easing,
+                    duration: opts.duration
+                }
+            );
         }
 
         /********************************/
         /* EVENT HANDLING               */
         /********************************/
 
-        var onWindowScroll = function( event ){
+        var onWindowScroll = function(event) {
 
             // Stop unveil animation if any
             $this.stop();
@@ -88,24 +86,26 @@
 
             // Unveil completely if just partly unveiled
             clearTimeout(unveilTimeout);
-            if(scrollDirection == 1 && Math.abs(newTop) < $this.outerHeight()){
+            if (scrollDirection == 1 && Math.abs(newTop) < $this.outerHeight()) {
                 unveilTimeout = setTimeout(that.unveil, opts.timeout)
             }
 
             // Show when scrolled to the very bottom
-            if(newScrollTop == $(document).height() - $(window).height()){
+            if (newScrollTop == $(document).height() - $(window).height()) {
                 that.unveil();
             }
 
             // Assign class if scrolled to the very top
-            if(newScrollTop == 0){
+            if (newScrollTop == 0) {
                 $this.removeClass(opts.affixedClass);
-            }else if(newScrollTop > $this.outerHeight()){
+            } else if (newScrollTop > $this.outerHeight()) {
                 $this.addClass(opts.affixedClass);
             }
 
-            // Asign new position
-            $this.css({ top: newTop });
+            // Assign new position
+            $this.css({
+                top: newTop
+            });
 
 
             // Update memory
@@ -144,8 +144,8 @@
         acceleration:  1,             // Acceleration of unveiling/hiding
         affixedClass:  'is-affixed',  // Class that will be added when being scrolled
         timeout:       300,           // Timeout before the navigation gets unveiled on scroll stop
-        // easing:        'linear',      // Esing function that is used for automatical unveiling/hiding
-        // duration:      350            // Duration of the automatic unveiling/hiding
+        easing:        'swing',       // Esing function that is used for automatical unveiling/hiding
+        duration:      350            // Duration of the automatic unveiling/hiding
     };
 
 })(jQuery);
