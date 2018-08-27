@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Контакты — Commito'
+  - var pageClass = 'page-secondary page-contacts'
+
+block content
+  include ../modules/header-secondary
+  main.main
+    .container.secondary-container
+      .row.secondary-row.no-gutters
+        .col-6.secondary-col
+          .secondary
+            .secondary-head
+              .secondary-logo
+                a.logo(href="#") Commito
+              .secondary-nav
+                a.btn.btn-default.btn-nav-back(href="#")
+                  +icon('arrow-back')
+                  | Назад
+            .secondary-body
+              .secondary-content
+                h1 Контакты
+                p
+                  | ООО «СМП»
+                  br
+                  | Юр.адрес: 117105, г. Москва, Нагорный проезд, д. 10, корп. 2, стр. 2
+                  br
+                  | Фактический адрес: 117105, г. Москва, Нагорный проезд, д. 10, корп. 2, стр. 2
+                  br
+                  | р/c No 40702.810.2.00002455397 в «АО «Райффайзенбанк», г.Москва»
+                  br
+                  | Кор. счет No 30101810200000000700
+                  br
+                  | БИК: 044525700
+                  br
+                  | ИНН: 7726722376 / КПП: 772601001
+                  br
+                  | Генеральный директор
+                  br
+                  | Немченко Максим Валентинович

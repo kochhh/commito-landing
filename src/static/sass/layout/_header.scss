@@ -1,20 +1,24 @@
 .header {
   left: 0;
-  position: fixed;
-  // position: absolute;
+  position: absolute;
   top: 0;
-  // transform: translateY(0);
-  // transition: top 0.3s ease-in-out;
   width: 100%;
+  transition: transform 0.25s ease-in-out;
+  will-change: transform;
   z-index: $zindex-fixed;
 
-  // &.is-hidden {
-  //   transform: translateY(-100%);
-  // }
+  &--unpinned {
+    transform: translateY(-100%);
+  }
 
-  &.is-affixed {
+  &--pinned {
+    transform: translateY(0);
+  }
+
+  &--affixed {
     backdrop-filter: blur(5px);
     background-color: rgba(#fff, 0.78);
+    position: fixed;
 
     .navbar {
       color: $dark;
@@ -51,12 +55,8 @@
     }
 
     .btn-login {
-      @include button-variant($background: rgba(#E3E9EC, 0), $border: #E3E9EC, $hover-background: #E3E9EC, $active-background: darken(#E3E9EC, 2%));
+      @include button-variant($background: rgba($border-color, 0), $border: $border-color, $hover-background: $border-color, $active-background: darken($border-color, 2.5%));
       color: $dark !important;
-
-      &::before {
-        border-color: #E3E9EC;
-      }
     }
   }
 }
@@ -68,7 +68,6 @@
   padding-top: 64px;
   padding-bottom: 64px;
   position: relative;
-  transition: all 0.35s;
 }
 
 .navbar-left {

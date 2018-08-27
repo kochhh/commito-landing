@@ -1,6 +1,4 @@
 .btn {
-  border: none;
-
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     &:focus {
@@ -10,49 +8,30 @@
 }
 
 .btn-auth {
-  color: $purple;
+  color: $purple !important;
   font-size: rem(13);
   font-weight: 500;
-  line-height: rem(16);
+  line-height: 18px;
   margin-left: 30px;
-  padding: rem(11) rem(18);
+  padding: rem(10) rem(18);
   position: relative;
-
-  &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($purple, .5);
-  }
 }
 
 .btn-signup {
-  background-color: rgba($purple, 0.2);
-
-  &:hover {
-    background-color: rgba(#161B42, 0.47);
-  }
+  @include button-variant($background: rgba($purple, 0.2), $border: rgba($purple, 0), $hover-background: darken(rgba($purple, 0.2), 7.5%), $active-background: darken(rgba($purple, 0.2), 10%));
 }
 
 .btn-login {
   @include button-variant($background: rgba($purple, 0), $border: $purple, $hover-background: rgba($purple, 0.2), $active-background: rgba($purple, 0.125));
-  color: $purple !important;
 
-  &::before {
-    @include absolute-all(0);
-    border: 2px solid $purple;
-    border-radius: $btn-border-radius;
-    content: '';
-    transition: opacity .15s ease-in-out;
-    z-index: -1;
-  }
-
-  &:hover {
-    &::before {
-      opacity: 0;
-    }
+  &:hover,
+  &:active {
+    border-color: transparent !important;
   }
 }
 
 .btn-lang-toggle {
-  background-color: transparent;
+  background: transparent;
   box-shadow: none !important;
   color: $purple;
   height: 38px;
@@ -76,7 +55,7 @@
   color: #fff !important;
   font-size: rem(16);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 20px;
   padding: rem(14) rem(30);
 }
 
@@ -84,7 +63,7 @@
   color: #fff !important;
   font-size: rem(16);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 20px;
   padding: rem(14) rem(30);
 }
 
@@ -93,7 +72,7 @@
   font-size: rem(13);
   font-weight: 500;
   line-height: 18px;
-  padding: rem(10) rem(20);
+  padding: rem(10) rem(18);
   position: relative;
 
   .fab {
@@ -116,5 +95,24 @@
 
   &--facebook {
     @include button-variant($background: $bc-facebook, $border: $bc-facebook, $hover-background: darken($bc-facebook, 7.5%), $active-background: darken($bc-facebook, 10%));
+  }
+}
+
+.btn-default {
+  @include button-variant($background: $body-bg, $border: $border-color, $hover-background: darken(tint($border-color, 85%), 5%), $active-background: darken(tint($border-color, 85%), 7.5%));
+  color: $dark !important;
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.btn-nav-back {
+  align-items: center;
+  display: inline-flex;
+  padding: rem(10) rem(24) rem(10) rem(15);
+
+  .icon-arrow-back {
+    @include size(14px, 13px);
+    margin-right: 9px;
   }
 }

@@ -1,0 +1,35 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Безопасность платежей — Commito'
+  - var pageClass = 'page-secondary page-safety'
+
+block content
+  include ../modules/header-secondary
+  main.main
+    .container.secondary-container
+      .row.secondary-row.no-gutters
+        .col-6.secondary-col
+          .secondary
+            .secondary-head
+              .secondary-logo
+                a.logo(href="#") Commito
+              .secondary-nav
+                a.btn.btn-default.btn-nav-back(href="#")
+                  +icon('arrow-back')
+                  | Назад
+            .secondary-body
+              .secondary-content
+                h1 Безопасность платежей
+                .payment-options
+                  img(src="./static/i/general/logo-visa-2.svg" width="62" height="19" alt="Visa")
+                  img(src="./static/i/general/logo-mastercard.svg" width="43" height="27" alt="MasterCard")
+                  img(src="./static/i/general/logo-mir-2.svg" width="77" height="21" alt="МИР")
+                  img(src="./static/i/general/logo-uniteller.svg" width="66" height="38" alt="Uniteller")
+                h2 Уважаемый клиент!
+                p Вы&nbsp;можете оплатить свой заказ онлайн, с&nbsp;помощью предложенных методов оплат, через процессинговый центр Uniteller. После подтверждения заказа, Вы&nbsp;будете перенаправлены на&nbsp;защищенную платежную страницу Uniteller, где Вам необходимо будет вести данные для оплаты заказа. После успешной оплаты на&nbsp;указанную Вами электронную почту будет направлен электронный чек с&nbsp;необходимой информацией о&nbsp;произведенном заказе и&nbsp;способе оплаты.
+                h2 Гарантии безопасности
+                p Безопасность процессинга Uniteller подтверждена сертификатом стандарта безопасности данных индустрии платежных карт PCI DSS. Надежность сервиса обеспечивается интеллектуальной системой мониторинга мошеннических операций, применением 3D&nbsp;Secure&nbsp;&mdash; современной технологии обеспечения безопасности интернет-платежей.
+                p Данные Вашей карты вводятся на&nbsp;специальной защищенной платежной странице. Передача информации в&nbsp;процессинговый центр Uniteller происходит с&nbsp;применением технологии шифрования SSL. Дальнейшая передача информации осуществляется по&nbsp;закрытым банковским каналам, имеющим наивысший уровень надежности. Uniteller не&nbsp;передает данные Вашей карты магазину и&nbsp;иным третьим лицам.
+                p Если Ваша карта поддерживает технологию 3D&nbsp;Secure, для осуществления платежа, Вам необходимо будет пройти дополнительную проверку пользователя в&nbsp;банке-эмитенте (банк, который выпустил данную карту). Для этого&nbsp;Вы будете направлены на&nbsp;страницу банка, выдавшего Вашу карту. Вид проверки зависит от&nbsp;банка&nbsp;&mdash; как правило, это дополнительный пароль, который отправляется Вам в&nbsp;SMS, карта переменных кодов, либо другие способы.
+                p Если у&nbsp;Вас возникли вопросы по&nbsp;совершенному платежу, Вы&nbsp;можете обратиться в&nbsp;службу технической поддержки процессингового центра Uniteller: support@uniteller.ru или по&nbsp;телефону 8&nbsp;800&nbsp;100 19&nbsp;60.

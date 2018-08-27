@@ -5,3 +5,7 @@
 @function rem($size) {
   @return ($size/16)+rem;
 }
+
+@function tint($color, $percentage) {
+  @return mix(#ffffff, $color, $percentage);
+}

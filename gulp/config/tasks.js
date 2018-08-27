@@ -8,6 +8,5 @@ module.exports = [
 	'./gulp/tasks/fonts',
 	'./gulp/tasks/styles',
 	// './gulp/tasks/styles-legacy',
-	'./gulp/tasks/scripts',
-	'./gulp/tasks/favicon'
+	'./gulp/tasks/scripts'
 ];

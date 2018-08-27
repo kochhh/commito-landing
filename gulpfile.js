@@ -21,9 +21,7 @@ $.gulp.task('dev', $.gulp.series(
 
 $.gulp.task('build', $.gulp.series(
   'clean',
-  $.gulp.parallel('styles:build', 'pug', 'libsjs:build', 'js:build', 'js:copy', 'svg', 'img:build', 'fonts', 'svg:copy'),
-  'generate-favicon',
-  'inject-favicon-markups'
+  $.gulp.parallel('styles:build', 'pug', 'libsjs:build', 'js:build', 'js:copy', 'svg', 'img:build', 'fonts', 'svg:copy')
 ));
 
 $.gulp.task('default', $.gulp.series(

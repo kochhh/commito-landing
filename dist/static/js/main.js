@@ -1,7 +1,15 @@
 $(function() {
   svg4everybody();
+
   personsPicsAdjust();
-  $('.header').unveiledNavigation();
+
+  $('.header').headroom({
+    offset: 170,
+    tolerance: {
+      up: 5,
+      down: 0
+    }
+  });
 
   var $reviews = $('.reviews-slider').flickity({
     // wrapAround: true,

@@ -72,12 +72,12 @@
 // Components
 
 @import "components/typo";
-@import "components/titles";
+@import "components/text";
 @import "components/buttons";
 @import "components/components";
 @import "components/modals";
 
-// Sections
+// Landing sections
 
 @import "sections/section-intro";
 @import "sections/section-roles";
@@ -86,3 +86,7 @@
 @import "sections/section-features";
 @import "sections/section-integrations";
 @import "sections/section-reviews";
+
+// Secondary pages
+
+@import "pages/secondary";

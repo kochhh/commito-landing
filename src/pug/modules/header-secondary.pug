@@ -1,0 +1,17 @@
+header.header
+  .container
+    .navbar
+      .navbar-right
+        button.btn.btn-auth.btn-signup#landing-register-action(type="button" data-toggle="modal" data-target="#popup-auth") Регистрация
+        button.btn.btn-auth.btn-login#landing-login-action(type="button" data-toggle="modal" data-target="#popup-auth") Вход
+        .navbar-lang.dropdown
+          button.btn.btn-lang-toggle.dropdown-toggle#langDropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            img.lang-flag(src="./static/i/general/flags/ru.svg" alt="Русский")
+            +icon("caret")
+          .dropdown-menu(aria-labelledby="langDropdown")
+            a.dropdown-item(href="#" title="English")
+              img.lang-flag(src="./static/i/general/flags/gb.svg" alt="English")
+            a.dropdown-item(href="#" title="Русский")
+              img.lang-flag(src="./static/i/general/flags/ru.svg" alt="Русский")
+            a.dropdown-item(href="#" title="Deutsch")
+              img.lang-flag(src="./static/i/general/flags/de.svg" alt="Deutsch")
